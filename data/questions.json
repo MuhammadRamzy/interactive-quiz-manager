@@ -1,137 +1,3529 @@
 {
-  "Indian History": {
+  "Business & Economy": {
     "easy": [
       {
-        "id": "ih_e_1",
-        "question": "Which empire was ruled by Ashoka the Great?",
-        "options": ["Mauryan Empire", "Gupta Empire", "Mughal Empire", "Maratha Empire"],
-        "correct": 0,
-        "points": 5000
+        "id": "be_e_8056",
+        "question": "What is the currency of Japan?",
+        "options": ["A) Yen", "Yen", "B) Won", "C) Yuan"],
+        "correct": 1,
+        "points": 100
       },
       {
-        "id": "ih_e_2",
-        "question": "Who is known as the 'Iron Man of India'?",
-        "options": ["Sardar Vallabhbhai Patel", "Jawaharlal Nehru", "Subhas Chandra Bose", "Bhagat Singh"],
-        "correct": 0,
-        "points": 5000
-      }
-    ],
-    "moderate": [
-      {
-        "id": "ih_m_1",
-        "question": "Which Sultan of Delhi introduced the Persian festival of Nauroz in India?",
-        "options": ["Balban", "Alauddin Khilji", "Muhammad bin Tughlaq", "Firoz Shah Tughlaq"],
-        "correct": 2,
-        "points": 10000
-      },
-      {
-        "id": "ih_m_2",
-        "question": "Who was the first woman ruler of Delhi Sultanate?",
-        "options": ["Razia Sultan", "Nur Jahan", "Mumtaz Mahal", "Jodha Bai"],
-        "correct": 0,
-        "points": 10000
-      }
-    ],
-    "hard": [
-      {
-        "id": "ih_h_1",
-        "question": "Which Gupta emperor was known as 'Vikramaditya'?",
-        "options": ["Chandragupta I", "Samudragupta", "Chandragupta II", "Kumaragupta"],
-        "correct": 2,
-        "points": 15000
-      },
-      {
-        "id": "ih_h_2",
-        "question": "Who wrote the Sanskrit play 'Mudrarakshasa'?",
-        "options": ["Vishakhadatta", "Kalidasa", "Banabhatta", "Shudraka"],
-        "correct": 0,
-        "points": 15000
-      }
-    ]
-  },
-  "Science": {
-    "easy": [
-      {
-        "id": "sc_e_1",
-        "question": "What is the chemical symbol for Gold?",
-        "options": ["Au", "Ag", "Fe", "Cu"],
-        "correct": 0,
-        "points": 5000
-      },
-      {
-        "id": "sc_e_2",
-        "question": "Which planet is known as the Red Planet?",
-        "options": ["Mars", "Venus", "Jupiter", "Saturn"],
-        "correct": 0,
-        "points": 5000
-      }
-    ],
-    "moderate": [
-      {
-        "id": "sc_m_1",
-        "question": "What is the process by which plants make their own food?",
-        "options": ["Photosynthesis", "Respiration", "Transpiration", "Reproduction"],
-        "correct": 0,
-        "points": 10000
-      },
-      {
-        "id": "sc_m_2",
-        "question": "Which subatomic particle has a negative charge?",
-        "options": ["Electron", "Proton", "Neutron", "Positron"],
-        "correct": 0,
-        "points": 10000
-      }
-    ],
-    "hard": [
-      {
-        "id": "sc_h_1",
-        "question": "What is the half-life of Carbon-14?",
-        "options": ["5,730 years", "1,600 years", "10,000 years", "3,000 years"],
-        "correct": 0,
-        "points": 15000
-      },
-      {
-        "id": "sc_h_2",
-        "question": "Which quantum number describes the shape of an orbital?",
-        "options": ["Angular momentum", "Magnetic", "Principal", "Spin"],
-        "correct": 0,
-        "points": 15000
-      }
-    ]
-  },
-  "Technology": {
-    "easy": [
-      {
-        "id": "tech_e_1",
-        "question": "What does CPU stand for?",
+        "id": "be_e_1260",
+        "question": "What does GDP stand for?",
         "options": [
-          "Central Processing Unit",
-          "Central Program Utility",
-          "Computer Personal Unit",
-          "Control Processing Unit"
+          "b) General Development Plan",
+          "c) Global Debt Payment",
+          "a) Gross Domestic Product",
+          "a) Gross Domestic Product"
+        ],
+        "correct": 2,
+        "points": 100
+      },
+      {
+        "id": "be_e_7709",
+        "question": "What is the primary function of money in an economy?",
+        "options": [
+          "c) To increase wealth",
+          "a) To create inflation",
+          "b) To facilitate exchange",
+          "b) To facilitate exchange"
+        ],
+        "correct": 2,
+        "points": 100
+      },
+      {
+        "id": "be_e_5800",
+        "question": "Which of the following is an example of a primary sector activity?",
+        "options": [
+          "a) Banking",
+          "b) Software development",
+          "c) Farming",
+          "c) Farming"
+        ],
+        "correct": 2,
+        "points": 100
+      },
+      {
+        "id": "be_e_7248",
+        "question": "Which organization regulates the stock market in India?",
+        "options": ["b) SEBI", "a) RBI", "b) SEBI", "c) IRDAI"],
+        "correct": 0,
+        "points": 100
+      },
+      {
+        "id": "be_e_5786",
+        "question": "Which type of business structure limits the liability of its owners?",
+        "options": [
+          "c) Limited liability company",
+          "c) Limited liability company",
+          "a) Sole proprietorship",
+          "b) Partnership"
         ],
         "correct": 0,
-        "points": 5000
+        "points": 100
+      },
+      {
+        "id": "be_e_7720",
+        "question": "What does FDI stand for in economic terms?",
+        "options": [
+          "b) Fixed Domestic Investment",
+          "c) Foreign Direct Investment",
+          "c) Foreign Direct Investment",
+          "a) Foreign Development Index"
+        ],
+        "correct": 1,
+        "points": 100
+      },
+      {
+        "id": "be_e_2086",
+        "question": "Who is responsible for preparing the Union Budget in India?",
+        "options": [
+          "b) Finance Ministry",
+          "c) NITI Aayog",
+          "b) Finance Ministry",
+          "a) Reserve Bank of India"
+        ],
+        "correct": 0,
+        "points": 100
+      },
+      {
+        "id": "be_e_6755",
+        "question": "Which of the following is an example of a monopolistic market?",
+        "options": [
+          "b) Street food vendors",
+          "c) Automobile manufacturing",
+          "a) Railways in India",
+          "a) Railways in India"
+        ],
+        "correct": 2,
+        "points": 100
+      },
+      {
+        "id": "be_e_7548",
+        "question": "Which type of tax is GST (Goods and Services Tax)?",
+        "options": [
+          "c) Corporate Tax",
+          "b) Indirect Tax",
+          "a) Direct Tax",
+          "b) Indirect Tax"
+        ],
+        "correct": 1,
+        "points": 100
       }
     ],
     "moderate": [
       {
-        "id": "tech_m_1",
-        "question": "Which protocol is used to send emails?",
-        "options": ["SMTP", "HTTP", "FTP", "TCP"],
+        "id": "be_m_4978",
+        "question": "Which of the following is an example of a ‘unicorn startup’?",
+        "options": [
+          "B) A startup that has been profitable for over 10 years",
+          "C) A startup that operates in multiple countries",
+          "A) A startup valued at over $1 billion",
+          "A) A startup valued at over $1 billion"
+        ],
+        "correct": 2,
+        "points": 150
+      },
+      {
+        "id": "be_m_4900",
+        "question": "Which economic theory suggests that government intervention is necessary to manage economic fluctuations?",
+        "options": [
+          "b) Keynesian economics",
+          "a) Classical economics",
+          "b) Keynesian economics",
+          "c) Monetarism"
+        ],
         "correct": 0,
-        "points": 10000
+        "points": 150
+      },
+      {
+        "id": "be_m_9158",
+        "question": "What is the role of the IMF (International Monetary Fund)?",
+        "options": [
+          "c) Providing financial assistance to countries in economic crisis",
+          "b) Regulating international trade",
+          "a) Controlling global oil prices",
+          "c) Providing financial assistance to countries in economic crisis"
+        ],
+        "correct": 0,
+        "points": 150
+      },
+      {
+        "id": "be_m_9005",
+        "question": "What does ‘Repo Rate’ refer to?",
+        "options": [
+          "a) The rate at which RBI lends money to commercial banks",
+          "b) The rate at which banks lend money to businesses",
+          "c) The tax levied on repurchase agreements",
+          "a) The rate at which RBI lends money to commercial banks"
+        ],
+        "correct": 0,
+        "points": 150
+      },
+      {
+        "id": "be_m_1930",
+        "question": "Which Indian company was the first to cross $100 billion in market capitalization?",
+        "options": [
+          "a) Reliance Industries",
+          "b) Tata Consultancy Services (TCS)",
+          "a) Reliance Industries",
+          "c) Infosys"
+        ],
+        "correct": 0,
+        "points": 150
+      },
+      {
+        "id": "be_m_8751",
+        "question": "What is the primary objective of monetary policy?",
+        "options": [
+          "b) Control inflation and stabilize the economy",
+          "c) Encourage foreign investments",
+          "a) Increase government revenue",
+          "b) Control inflation and stabilize the economy"
+        ],
+        "correct": 0,
+        "points": 150
+      },
+      {
+        "id": "be_m_7270",
+        "question": "Which of the following is an example of a fiscal policy tool?",
+        "options": [
+          "c) Taxation and government spending",
+          "a) Interest rate adjustments",
+          "b) Open market operations",
+          "c) Taxation and government spending"
+        ],
+        "correct": 0,
+        "points": 150
+      },
+      {
+        "id": "be_m_5978",
+        "question": "What does ‘Balance of Trade’ refer to?",
+        "options": [
+          "b) The difference between revenue and expenditure",
+          "a) The balance between imports and exports of a country",
+          "a) The balance between imports and exports of a country",
+          "c) The ratio of direct to indirect taxes"
+        ],
+        "correct": 1,
+        "points": 150
+      },
+      {
+        "id": "be_m_8464",
+        "question": "Which industry is the largest contributor to India’s GDP?",
+        "options": [
+          "c) Services",
+          "a) Agriculture",
+          "b) Manufacturing",
+          "c) Services"
+        ],
+        "correct": 0,
+        "points": 150
+      },
+      {
+        "id": "be_m_9083",
+        "question": "Which of the following is an example of a green economy initiative?",
+        "options": [
+          "c) Expanding nuclear weapon programs",
+          "b) Reducing carbon emissions in production processes",
+          "b) Reducing carbon emissions in production processes",
+          "a) Investing in coal mining"
+        ],
+        "correct": 1,
+        "points": 150
+      },
+      {
+        "id": "be_m_3367",
+        "question": "Which company uses the tagline \"Drive your way\"?",
+        "options": ["Ericsson", "Yamaha", "Toyota", "Hyundai"],
+        "correct": 3,
+        "points": 150
       }
     ],
     "hard": [
       {
-        "id": "tech_h_1",
-        "question": "What is the time complexity of binary search?",
-        "options": ["O(log n)", "O(n)", "O(n²)", "O(1)"],
+        "id": "be_h_9985",
+        "question": "What does the term ‘Dutch Disease’ refer to in economics?",
+        "options": [
+          "B) The negative impact on a country's manufacturing sector due to the rapid growth of natural resource exports",
+          "A) A financial crisis caused by excessive government borrowing",
+          "C) A situation where inflation and unemployment rise simultaneously",
+          "B) The negative impact on a country's manufacturing sector due to the rapid growth of natural resource exports"
+        ],
         "correct": 0,
-        "points": 15000
+        "points": 200
+      },
+      {
+        "id": "be_h_1844",
+        "question": "Which Indian company became the first to reach a $200 billion market capitalization?",
+        "options": ["Tata", "Infosys", "Reliance", "Reliance"],
+        "correct": 2,
+        "points": 200
+      },
+      {
+        "id": "be_h_1801",
+        "question": "Which of the following measures the general price level of goods and services in an economy?",
+        "options": [
+          "c) GNP",
+          "b) CPI (Consumer Price Index)",
+          "b) CPI (Consumer Price Index)",
+          "a) GDP"
+        ],
+        "correct": 1,
+        "points": 200
+      },
+      {
+        "id": "be_h_6245",
+        "question": "Which economic indicator measures a country's total economic output including income from abroad?",
+        "options": ["a) GDP", "c) NDP", "b) GNP", "b) GNP"],
+        "correct": 2,
+        "points": 200
+      },
+      {
+        "id": "be_h_7727",
+        "question": "What is the main cause of ‘Cost-Push Inflation’?",
+        "options": [
+          "b) Increase in production costs",
+          "c) Increase in foreign investments",
+          "b) Increase in production costs",
+          "a) Increase in consumer demand"
+        ],
+        "correct": 0,
+        "points": 200
+      },
+      {
+        "id": "be_h_1859",
+        "question": "Which of the following best describes the ‘Laffer Curve’?",
+        "options": [
+          "b) The effect of inflation on savings",
+          "a) The relationship between tax rates and tax revenue",
+          "a) The relationship between tax rates and tax revenue",
+          "c) The impact of interest rates on investment"
+        ],
+        "correct": 1,
+        "points": 200
+      },
+      {
+        "id": "be_h_3179",
+        "question": "Which type of unemployment occurs when workers' skills do not match available jobs?",
+        "options": [
+          "a) Cyclical unemployment",
+          "b) Frictional unemployment",
+          "c) Structural unemployment",
+          "c) Structural unemployment"
+        ],
+        "correct": 2,
+        "points": 200
+      },
+      {
+        "id": "be_h_7080",
+        "question": "Which economic concept explains why a country specializes in producing certain goods and trades with others?",
+        "options": [
+          "c) Protectionism",
+          "b) Absolute advantage",
+          "a) Comparative advantage",
+          "a) Comparative advantage"
+        ],
+        "correct": 2,
+        "points": 200
+      },
+      {
+        "id": "be_h_839",
+        "question": "What does the ‘Phillips Curve’ illustrate?",
+        "options": [
+          "c) The effect of exchange rates on trade",
+          "b) The correlation between GDP growth and interest rates",
+          "a) The relationship between unemployment and inflation",
+          "a) The relationship between unemployment and inflation"
+        ],
+        "correct": 2,
+        "points": 200
+      },
+      {
+        "id": "be_h_1938",
+        "question": "Which sector of the Indian economy is growing the fastest in recent years?",
+        "options": [
+          "c) IT and Services",
+          "c) IT and Services",
+          "b) Manufacturing",
+          "a) Agriculture"
+        ],
+        "correct": 0,
+        "points": 200
+      },
+      {
+        "id": "be_h_141",
+        "question": "What does ‘Stagflation’ refer to?",
+        "options": [
+          "b) High inflation and stagnant growth",
+          "a) High growth and low inflation",
+          "c) Low inflation and high unemployment",
+          "b) High inflation and stagnant growth"
+        ],
+        "correct": 0,
+        "points": 200
+      },
+      {
+        "id": "be_h_6551",
+        "question": "Which financial instrument represents ownership in a company?",
+        "options": ["c) Mutual fund", "a) Bond", "b) Stock", "b) Stock"],
+        "correct": 2,
+        "points": 200
+      },
+      {
+        "id": "be_h_3474",
+        "question": "Which country is the largest trading partner of India?",
+        "options": ["a) USA", "b) China", "b) China", "c) UAE"],
+        "correct": 1,
+        "points": 200
+      }
+    ]
+  },
+  "Logical & Riddle-Based Questions": {
+    "easy": [
+      {
+        "id": "lq_e_2341",
+        "question": "A father and son were in a car accident. The father died on the spot, but the son was rushed to the hospital. The surgeon saw the boy and said, \"I can't operate on him—he's my son!\" How is this possible?",
+        "options": [
+          "C) The surgeon is the boy’s mother",
+          "B) The boy was adopted",
+          "C) The surgeon is the boy’s mother",
+          "A) The surgeon is mistaken"
+        ],
+        "correct": 0,
+        "points": 100
+      },
+      {
+        "id": "lq_e_5369",
+        "question": "A farmer has 17 sheep, and all but 9 run away. How many are left?",
+        "options": ["17", "9", "0", "9"],
+        "correct": 1,
+        "points": 100
+      }
+    ],
+    "moderate": [
+      {
+        "id": "lq_m_6274",
+        "question": "A man buys a horse for ₹60, sells it for ₹70, buys it back for ₹80, and sells it again for ₹90. How much profit did he make in total?",
+        "options": ["B) ₹20", "B) ₹20", "A) ₹10", "C) ₹30"],
+        "correct": 0,
+        "points": 150
+      }
+    ],
+    "hard": [
+      {
+        "id": "lq_h_7201",
+        "question": "I am a word of five letters. People eat me. If you remove my first letter, I become a form of energy. If you remove my first two letters, I become something you need to live. What am I?",
+        "options": ["C) Bread", "B) Steak", "A) Wheat", "C) Bread"],
+        "correct": 0,
+        "points": 200
+      }
+    ]
+  },
+  "Language & Literature": {
+    "easy": [
+      {
+        "id": "ll_e_1941",
+        "question": "What is the plural of \"child\"?",
+        "options": ["C) Children", "A) Childs", "C) Children", "B) Childrens"],
+        "correct": 0,
+        "points": 100
+      },
+      {
+        "id": "ll_e_6748",
+        "question": "Who wrote the novel \"Pride and Prejudice\"?",
+        "options": [
+          "Emily Brontë",
+          "Jane Austen",
+          "Charlotte Brontë",
+          "Jane Rubino"
+        ],
+        "correct": 1,
+        "points": 100
+      },
+      {
+        "id": "ll_e_3322",
+        "question": "Which literary device is used in the phrase \"the sun smiled down on us?",
+        "options": ["Personification", "Hyperbole", "Metaphor", "Simile"],
+        "correct": 0,
+        "points": 100
+      },
+      {
+        "id": "ll_e_3584",
+        "question": "What is the setting of \"Lord of the Flies\"?",
+        "options": [
+          "A medieval castle",
+          "A rural farm",
+          "A deserted island",
+          "A dystopian city"
+        ],
+        "correct": 2,
+        "points": 100
+      },
+      {
+        "id": "ll_e_9329",
+        "question": "Which Shakespeare play features the character Iago?",
+        "options": ["King Lear", "Othello", "Macbeth", "Hamlet"],
+        "correct": 1,
+        "points": 100
+      },
+      {
+        "id": "ll_e_9992",
+        "question": "What is the primary language of the original \"Don Quixote\" novel?",
+        "options": ["Portuguese", "Italian", "Spanish", "French"],
+        "correct": 2,
+        "points": 100
+      },
+      {
+        "id": "ll_e_6475",
+        "question": "Who is the protagonist of \"To Kill a Mockingbird\"?",
+        "options": [
+          "Boo Radley",
+          "Atticus Finch",
+          "Tom Robinson",
+          "Scout Finch"
+        ],
+        "correct": 3,
+        "points": 100
+      },
+      {
+        "id": "ll_e_5285",
+        "question": "Which term refers to the repetition of initial consonant sounds?",
+        "options": ["Onomatopoeia", "Alliteration", "Consonance", "Assonance"],
+        "correct": 1,
+        "points": 100
+      },
+      {
+        "id": "ll_e_3970",
+        "question": "In \"Romeo and Juliet,\" which family does Juliet belong to?",
+        "options": ["Montague", "Capulet", "Escalus", "Mercutio"],
+        "correct": 1,
+        "points": 100
+      },
+      {
+        "id": "ll_e_9173",
+        "question": "Which author wrote \"The Great Gatsby\"?",
+        "options": [
+          "John Steinbeck",
+          "Ernest Hemingway",
+          "F. Scott Fitzgerald",
+          "William Faulkner"
+        ],
+        "correct": 2,
+        "points": 100
+      },
+      {
+        "id": "ll_e_7560",
+        "question": "What genre is George Orwell’s \"1984\"?",
+        "options": ["Fantasy", "Dystopian", "Historical Fiction", "Romance"],
+        "correct": 1,
+        "points": 100
+      }
+    ],
+    "moderate": [
+      {
+        "id": "ll_m_2434",
+        "question": "Which of the following literary devices involves an indirect reference to a person, place, event, or work of art?",
+        "options": [
+          "B) Allusion",
+          "B) Allusion",
+          "C) Hyperbole",
+          "A) Metaphor"
+        ],
+        "correct": 0,
+        "points": 150
+      },
+      {
+        "id": "ll_m_328",
+        "question": "Who wrote the dystopian novel 1984?",
+        "options": [
+          "Ray Bradbury",
+          "George Orwell",
+          "George Orwell",
+          "Aldous Huxley"
+        ],
+        "correct": 1,
+        "points": 150
+      },
+      {
+        "id": "ll_m_5175",
+        "question": "Which novel opens with the line: “It was the best of times, it was the worst of times”?",
+        "options": [
+          "Anna Karenina",
+          "Moby-Dick",
+          "Wuthering Heights",
+          "A Tale of Two Cities"
+        ],
+        "correct": 3,
+        "points": 150
+      },
+      {
+        "id": "ll_m_2548",
+        "question": "Who is the tragic hero in \"Macbeth\"?",
+        "options": ["Macduff", "Macbeth", "Banquo", "Duncan"],
+        "correct": 1,
+        "points": 150
+      },
+      {
+        "id": "ll_m_6234",
+        "question": "Which poet wrote \"The Road Not Taken\"?",
+        "options": [
+          "Emily Dickinson",
+          "Walt Whitman",
+          "Robert Frost",
+          "T.S. Eliot"
+        ],
+        "correct": 2,
+        "points": 150
+      },
+      {
+        "id": "ll_m_3420",
+        "question": "What is the central theme of Harper Lee’s \"To Kill a Mockingbird\"?",
+        "options": [
+          "Technological dystopia",
+          "Racial injustice",
+          "War and peace",
+          "Love conquers all"
+        ],
+        "correct": 1,
+        "points": 150
+      },
+      {
+        "id": "ll_m_6902",
+        "question": "In \"Frankenstein,\" whats the creatures name?",
+        "options": ["Frankenstein", "Henry Clerval", "Adam", "It has No name"],
+        "correct": 3,
+        "points": 150
+      },
+      {
+        "id": "ll_m_3244",
+        "question": "Which literary movement is associated with Kafka’s \"The Metamorphosis\"?",
+        "options": ["Modernism", "Realism", "Existentialism", "Romanticism"],
+        "correct": 2,
+        "points": 150
+      },
+      {
+        "id": "ll_m_501",
+        "question": "Who wrote the poem \"Ozymandias\"?",
+        "options": [
+          "William Wordsworth",
+          "John Keats",
+          "Percy Bysshe Shelley",
+          "Samuel Taylor Coleridge"
+        ],
+        "correct": 2,
+        "points": 150
+      },
+      {
+        "id": "ll_m_817",
+        "question": "Which novel features the character Holden Caulfield?",
+        "options": [
+          "On the Road",
+          "The Catcher in the Rye",
+          "The Exorcist",
+          "Holden's Performance"
+        ],
+        "correct": 1,
+        "points": 150
+      },
+      {
+        "id": "ll_m_9366",
+        "question": "What is the term for a 14-line poem with a specific rhyme scheme?",
+        "options": ["Limerick", "Haiku", "Sonnet", "Ode"],
+        "correct": 2,
+        "points": 150
+      },
+      {
+        "id": "ll_m_5889",
+        "question": "Who is the author of \"Beloved\"?",
+        "options": [
+          "Zora Neale Hurston",
+          "Alice Walker",
+          "Toni Morrison",
+          "Maya Angelou"
+        ],
+        "correct": 2,
+        "points": 150
+      }
+    ],
+    "hard": [
+      {
+        "id": "ll_h_513",
+        "question": "Which classic novel begins with the line: \"Call me Ishmael\"?",
+        "options": [
+          "B) Moby-Dick",
+          "C) Pride and Prejudice",
+          "A) The Great Gatsby",
+          "B) Moby-Dick"
+        ],
+        "correct": 0,
+        "points": 200
+      },
+      {
+        "id": "ll_h_701",
+        "question": "Which modernist novel includes the stream-of-consciousness technique in its depiction of a single day in Dublin?",
+        "options": [
+          "Mrs. Dalloway",
+          "To the Lighthouse",
+          "Ulysses",
+          "The Sound and the Fury"
+        ],
+        "correct": 2,
+        "points": 200
+      },
+      {
+        "id": "ll_h_644",
+        "question": "In \"The Waste Land,\" which mythological figure does T.S. Eliot reference extensively?",
+        "options": ["Icarus", "Odysseus", "Tiresias", "Medusa"],
+        "correct": 2,
+        "points": 200
+      },
+      {
+        "id": "ll_h_1830",
+        "question": "Who wrote the existentialist play \"No Exit\"?",
+        "options": [
+          "Albert Camus",
+          "Jean-Paul Sartre",
+          "Franz Kafka",
+          "Samuel Beckett"
+        ],
+        "correct": 1,
+        "points": 200
+      },
+      {
+        "id": "ll_h_15",
+        "question": "Which literary work is written in the form of an epistolary novel?",
+        "options": ["Dracula", "1984", "Pride and Prejudice", "Moby-Dick"],
+        "correct": 0,
+        "points": 200
+      },
+      {
+        "id": "ll_h_6672",
+        "question": "What poetic form does Sylvia Plath use in \"Daddy\"?",
+        "options": [
+          "Villanelle",
+          "Free verse",
+          "Confessional poetry",
+          "Sestina"
+        ],
+        "correct": 2,
+        "points": 200
+      },
+      {
+        "id": "ll_h_1664",
+        "question": "Which author is known for pioneering the \"magical realism\" genre with the novel *One Hundred Years of Solitude?",
+        "options": [
+          "Salman Rushdie",
+          "Haruki Murakami",
+          "Gabriel García Márquez",
+          "Isabel Allende"
+        ],
+        "correct": 2,
+        "points": 200
+      },
+      {
+        "id": "ll_h_6994",
+        "question": "In postcolonial literature, which author wrote \"Midnight’s Children\"?",
+        "options": [
+          "Arundhati Roy",
+          "Salman Rushdie",
+          "Chinua Achebe",
+          "Jhumpa Lahiri"
+        ],
+        "correct": 1,
+        "points": 200
+      },
+      {
+        "id": "ll_h_5431",
+        "question": "What is the term for a narrative that starts in the middle of the action?",
+        "options": ["Foreshadowing", "Flashback", "In medias res", "Epilogue"],
+        "correct": 2,
+        "points": 200
+      },
+      {
+        "id": "ll_h_9455",
+        "question": "Which character says, “Life’s but a walking shadow” in Shakespeare?",
+        "options": ["none of them", "Othello", "Macbeth", "Hamlet"],
+        "correct": 2,
+        "points": 200
+      },
+      {
+        "id": "ll_h_2806",
+        "question": "In literary theory, which term refers to the practice of analyzing texts through their underlying structures and systems of meaning?",
+        "options": [
+          "New Historicism",
+          "Deconstruction",
+          "Postmodernism",
+          "Structuralism"
+        ],
+        "correct": 3,
+        "points": 200
+      }
+    ]
+  },
+  "Sports & Games": {
+    "easy": [
+      {
+        "id": "sg_e_3232",
+        "question": "Which among these players played/plays in the midfield position in football?",
+        "options": [
+          "Kevin De Bruyne",
+          "Lionel Messi",
+          "Virgil Van Dijk",
+          "Kevin De Bruyne"
+        ],
+        "correct": 0,
+        "points": 100
+      },
+      {
+        "id": "sg_e_5781",
+        "question": "Which country has won the most FIFA World Cups?",
+        "options": ["Brazil", "Brazil", "India", "Argentina"],
+        "correct": 0,
+        "points": 100
+      },
+      {
+        "id": "sg_e_6845",
+        "question": "Who hosted the 2018 World Cup?",
+        "options": ["Russia", "Qatar", "Brazil", "Germany"],
+        "correct": 0,
+        "points": 100
+      },
+      {
+        "id": "sg_e_8257",
+        "question": "Which was the first African team to reach the World Cup semi-finals?",
+        "options": ["Nigeria", "Morocco", "Ghana", "Cameroon"],
+        "correct": 1,
+        "points": 100
+      },
+      {
+        "id": "sg_e_292",
+        "question": "Which of these sports is played with a bat, a ball and wickets?",
+        "options": ["Cricket", "Hockey", "Cricket", "Baseball"],
+        "correct": 0,
+        "points": 100
+      },
+      {
+        "id": "sg_e_1800",
+        "question": "How many players are in a basketball team on the court at a time?",
+        "options": ["7", "11", "5", "5"],
+        "correct": 2,
+        "points": 100
+      },
+      {
+        "id": "sg_e_3484",
+        "question": "What is the standard length of a football match?",
+        "options": ["90 Minutes", "120 Minutes", "45 Minutes", "90 Minutes"],
+        "correct": 0,
+        "points": 100
+      },
+      {
+        "id": "sg_e_3390",
+        "question": "Which sport is played at the Augusta National Club?",
+        "options": ["Hockey", "Golf", "Golf", "Cricket"],
+        "correct": 1,
+        "points": 100
+      },
+      {
+        "id": "sg_e_4720",
+        "question": "What do you hit in the game of golf?",
+        "options": ["Ball", "Ball", "Puck", "Shuttlecock"],
+        "correct": 0,
+        "points": 100
+      },
+      {
+        "id": "sg_e_2454",
+        "question": "Which of these sports involves scoring a touchdown?",
+        "options": [
+          "Baseball",
+          "American Football",
+          "Rugby",
+          "American Football"
+        ],
+        "correct": 1,
+        "points": 100
+      },
+      {
+        "id": "sg_e_9884",
+        "question": "Which sport is played in the MLB?",
+        "options": ["Baseball", "Baseball", "Basketball", "Badminton"],
+        "correct": 0,
+        "points": 100
+      },
+      {
+        "id": "sg_e_519",
+        "question": "In which sport do players compete for the Stanley Cup?",
+        "options": ["Ice Hockey", "Ice Hockey", "Hockey", "Skating"],
+        "correct": 0,
+        "points": 100
+      },
+      {
+        "id": "sg_e_6296",
+        "question": "What does NBA stand for?",
+        "options": [
+          "National Basketball Association",
+          "National Baseball Association",
+          "National Badminton Association",
+          "National Bowling Association"
+        ],
+        "correct": 0,
+        "points": 100
+      },
+      {
+        "id": "sg_e_7958",
+        "question": "How many bases are there on a baseball field?",
+        "options": ["6", "4", "3", "5"],
+        "correct": 1,
+        "points": 100
+      }
+    ],
+    "moderate": [
+      {
+        "id": "sg_m_9761",
+        "question": "Which among these is a team in the NBA?",
+        "options": [
+          "Seattle Supergiants",
+          "Utah Thunder",
+          "Brooklyn Knicks",
+          "Indiana Pacers"
+        ],
+        "correct": 3,
+        "points": 150
+      },
+      {
+        "id": "sg_m_9068",
+        "question": "Who won the FIFA World Cup in 2006?",
+        "options": ["France", "Germany", "Spain", "Italy"],
+        "correct": 3,
+        "points": 150
+      },
+      {
+        "id": "sg_m_1278",
+        "question": "Which player has scored the most goals in FIFA World Cup history?",
+        "options": ["Lionel Messi", "Pele", "Miroslav Klose", "Kylian Mbappe"],
+        "correct": 2,
+        "points": 150
+      },
+      {
+        "id": "sg_m_4578",
+        "question": "In which year did the first FIFA World Cup take place, and which country hosted it?",
+        "options": [
+          "1928, Italy",
+          "1934, Germany",
+          "1926, Argentina",
+          "1930, Uruguay"
+        ],
+        "correct": 3,
+        "points": 150
+      },
+      {
+        "id": "sg_m_3183",
+        "question": "In which sport would you find a pommel horse?",
+        "options": ["Diving", "Wrestling", "Equestrian", "Gymnastics"],
+        "correct": 3,
+        "points": 150
+      },
+      {
+        "id": "sg_m_1632",
+        "question": "What is the only sport to have been played on the moon?",
+        "options": ["Tennis", "Football", "Basketball", "Golf"],
+        "correct": 3,
+        "points": 150
+      },
+      {
+        "id": "sg_m_7656",
+        "question": "Who holds the record for the most career home runs in Major League Baseball?",
+        "options": ["Hank Aaron", "Barry Bonds", "Babe Ruth", "Barry Bonds"],
+        "correct": 1,
+        "points": 150
+      },
+      {
+        "id": "sg_m_3919",
+        "question": "Which NBA player has the most career assists?",
+        "options": [
+          "Stephen Curry",
+          "LeBron James",
+          "John Stockton",
+          "John Stockton"
+        ],
+        "correct": 2,
+        "points": 150
+      },
+      {
+        "id": "sg_m_9929",
+        "question": "What is the oldest tennis tournament in the world?",
+        "options": ["US Open", "Australia Open", "Wimbledon", "Wimbledon"],
+        "correct": 2,
+        "points": 150
+      },
+      {
+        "id": "sg_m_5326",
+        "question": "Which country has won the most Olympic gold medals in total?",
+        "options": [
+          "Russia",
+          "United States of America",
+          "China",
+          "United States of America"
+        ],
+        "correct": 1,
+        "points": 150
+      },
+      {
+        "id": "sg_m_1188",
+        "question": "Who holds the record for the most goals in a single NHL season?",
+        "options": [
+          "Wayne Gretzky",
+          "Wayne Gretzky",
+          "Brett Hull",
+          "Mario Lemieux"
+        ],
+        "correct": 0,
+        "points": 150
+      },
+      {
+        "id": "sg_m_2935",
+        "question": "Which country won the first Rugby World Cup in 1987?",
+        "options": ["South Africa", "New Zealand", "New Zealand", "England"],
+        "correct": 1,
+        "points": 150
+      },
+      {
+        "id": "sg_m_6840",
+        "question": "Who was the first female gymnast to score a perfect 10 in the Olympics?",
+        "options": [
+          "Mary Lou Retton",
+          "Olga Korbut",
+          "Nadia Comăneci",
+          "Nadia Comăneci"
+        ],
+        "correct": 2,
+        "points": 150
+      },
+      {
+        "id": "sg_m_6565",
+        "question": "Which country has won the most Tour de France titles?",
+        "options": ["Belgium", "France", "Italy", "France"],
+        "correct": 1,
+        "points": 150
+      },
+      {
+        "id": "sg_m_4302",
+        "question": "Who is the only athlete to win gold medals in both the Summer and Winter Olympics?",
+        "options": [
+          "Christa Luding-Rothenburger",
+          "Eddie Eagan",
+          "Eddie Eagan",
+          "Clara Hughes"
+        ],
+        "correct": 1,
+        "points": 150
+      }
+    ],
+    "hard": [
+      {
+        "id": "sg_h_3094",
+        "question": "What does \"DRS\" mean in Formula One?",
+        "options": [
+          "Drag Reduction System",
+          "Drag Reduction System",
+          "Dhoni Review System",
+          "Driver Radio System"
+        ],
+        "correct": 0,
+        "points": 200
+      },
+      {
+        "id": "sg_h_2480",
+        "question": "Which country has participated in every FIFA World Cup since its inception?",
+        "options": ["Italy", "Germany", "Argentina", "Brazil"],
+        "correct": 3,
+        "points": 200
+      },
+      {
+        "id": "sg_h_7603",
+        "question": "Which country won the first FIFA Women's World Cup in 1991?",
+        "options": ["United States", "Germany", "Norway", "United States"],
+        "correct": 0,
+        "points": 200
+      },
+      {
+        "id": "sg_h_3115",
+        "question": "Who holds the record for the fastest serve in tennis?",
+        "options": ["Andy Roddick", "Ivo Karlović", "Sam Groth", "Sam Groth"],
+        "correct": 2,
+        "points": 200
+      },
+      {
+        "id": "sg_h_827",
+        "question": "Which country has won the most medals in the Winter Olympics?",
+        "options": ["Norway", "Norway", "Russia", "Canada"],
+        "correct": 0,
+        "points": 200
+      },
+      {
+        "id": "sg_h_3035",
+        "question": "Who was the first African-American coach to win the Super Bowl?",
+        "options": ["Mike Tomlin", "Lovie Smith", "Tony Dungy", "Tony Dungy"],
+        "correct": 2,
+        "points": 200
+      },
+      {
+        "id": "sg_h_8289",
+        "question": "Which country has won the most Davis Cup titles in tennis?",
+        "options": [
+          "United States of America",
+          "Australia",
+          "France",
+          "United States of America"
+        ],
+        "correct": 0,
+        "points": 200
+      },
+      {
+        "id": "sg_h_94",
+        "question": "Who is the youngest player to score 10,000 points in the NBA?",
+        "options": [
+          "LeBron James",
+          "Michael Jordan",
+          "LeBron James",
+          "Kobe Bryant"
+        ],
+        "correct": 0,
+        "points": 200
+      },
+      {
+        "id": "sg_h_7300",
+        "question": "Which country has won the most Cricket World Cup titles?",
+        "options": ["Australia", "India", "England", "Australia"],
+        "correct": 0,
+        "points": 200
+      },
+      {
+        "id": "sg_h_7073",
+        "question": "Who was the first golfer to win the Masters Tournament five times?",
+        "options": [
+          "Tiger Woods",
+          "Arnold Palmer",
+          "Jack Nicklaus",
+          "Tiger Woods"
+        ],
+        "correct": 0,
+        "points": 200
+      },
+      {
+        "id": "sg_h_8254",
+        "question": "Which country has won the most FIBA Basketball World Cup titles?",
+        "options": ["USA", "USA", "Spain", "Soviet Union"],
+        "correct": 0,
+        "points": 200
+      },
+      {
+        "id": "sg_h_8900",
+        "question": "Who holds the record for the most consecutive Tour de France wins?",
+        "options": [
+          "Lance Armstrong",
+          "Miguel Indurain",
+          "Chris Froome",
+          "Lance Armstrong"
+        ],
+        "correct": 0,
+        "points": 200
+      }
+    ]
+  },
+  "Science & Technology": {
+    "easy": [
+      {
+        "id": "st_e_7730",
+        "question": "Which country hosted the 2014 FIFA World Cup?",
+        "options": ["Brazil", "Russia", "Qatar", "Brazil"],
+        "correct": 0,
+        "points": 100
+      },
+      {
+        "id": "st_e_8361",
+        "question": "What is the primary function of a transistor in a circuit?",
+        "options": [
+          "Amplify or switch electronic signal",
+          "Store electrical charge",
+          "Convert AC to DC",
+          "Measure voltage"
+        ],
+        "correct": 0,
+        "points": 100
+      },
+      {
+        "id": "st_e_1711",
+        "question": "What does HTTP stand for in web addresses?",
+        "options": [
+          "Hyper Text Transmission Protocol",
+          "Hyperlink Transfer Text Protocol",
+          "High-Tech Text Processing",
+          "Hyper Text Transfer Protocol"
+        ],
+        "correct": 3,
+        "points": 100
+      },
+      {
+        "id": "st_e_3462",
+        "question": "Which programming language is known for its use in machine learning libraries like TensorFlow?",
+        "options": ["C++", "Python", "Ruby", "Java"],
+        "correct": 1,
+        "points": 100
+      },
+      {
+        "id": "st_e_9072",
+        "question": "What is the full-form of pH?",
+        "options": [
+          "Potential of Hydrogen",
+          "Percentage of Hydrogen",
+          "Proportion of Hydrogen",
+          "Power of Hydrogen"
+        ],
+        "correct": 0,
+        "points": 100
+      },
+      {
+        "id": "st_e_2911",
+        "question": "Shake is a time unit equal to _______ seconds.",
+        "options": ["10⁻⁸", "10⁻⁷", "10⁻⁹", "10⁻⁶"],
+        "correct": 0,
+        "points": 100
+      },
+      {
+        "id": "st_e_4210",
+        "question": "Which protocol ensures secure communication over a network?",
+        "options": ["HTTP", "FTP", "HTTPS", "TCP"],
+        "correct": 2,
+        "points": 100
+      },
+      {
+        "id": "st_e_1035",
+        "question": "What phenomenon causes the sky to appear blue?",
+        "options": [
+          "Diffraction",
+          "Reflection",
+          "Rayleigh Scattering",
+          "Refraction"
+        ],
+        "correct": 2,
+        "points": 100
+      }
+    ],
+    "moderate": [
+      {
+        "id": "st_m_9329",
+        "question": "Which of the following elements was first artificially synthesized before being discovered in nature?",
+        "options": ["Promethium", "Francium", "Astatine", "Technetium"],
+        "correct": 3,
+        "points": 150
+      },
+      {
+        "id": "st_m_5432",
+        "question": "In quantum computing, what does a qubit represent?",
+        "options": [
+          "Binary 0 or 1",
+          "A photon’s polarization",
+          "A superposition of 0 and 1",
+          "A 3D vector"
+        ],
+        "correct": 2,
+        "points": 150
+      },
+      {
+        "id": "st_m_5526",
+        "question": "Which algorithm is used for asymmetric encryption?",
+        "options": ["RSA", "SHA-256", "AES", "MD5"],
+        "correct": 0,
+        "points": 150
+      },
+      {
+        "id": "st_m_4895",
+        "question": "What is the purpose of a PID controller?",
+        "options": [
+          "Image processing",
+          "Network routing",
+          "Regulate temperature/pressure in systems",
+          "Data compression"
+        ],
+        "correct": 2,
+        "points": 150
+      },
+      {
+        "id": "st_m_6805",
+        "question": "Which type of attack exploits SQL vulnerabilities?",
+        "options": ["Man-in-the-Middle", "DDoS", "SQL Injection", "Phishing"],
+        "correct": 2,
+        "points": 150
+      },
+      {
+        "id": "st_m_9252",
+        "question": "What does Moore's Law predict?",
+        "options": [
+          "Quantum supremacy by 2030",
+          "Decline of silicon chips",
+          "Doubling transistors every 2 years.",
+          "Exponential growth in AI"
+        ],
+        "correct": 2,
+        "points": 150
+      },
+      {
+        "id": "st_m_7842",
+        "question": "Which principle explains lift in airplane wings?",
+        "options": [
+          "Bernoulli’s Principle",
+          "Newton’s Third Law",
+          "Pascal’s Law",
+          "Archimedes’ Principle"
+        ],
+        "correct": 0,
+        "points": 150
+      },
+      {
+        "id": "st_m_7550",
+        "question": "What is the main advantage of CRISPR-Cas9?",
+        "options": [
+          "Faster data transfer",
+          "Solar energy storage",
+          "Quantum encryption",
+          "Precision gene editing"
+        ],
+        "correct": 3,
+        "points": 150
+      },
+      {
+        "id": "st_m_1063",
+        "question": "In IoT, what does MQTT stand for?",
+        "options": [
+          "Machine Query Time Transfer",
+          "Multi-Queue Telemetry Transport",
+          "Modular Quantum Transmission Tech",
+          "Message Queuing Telemetry Transport"
+        ],
+        "correct": 3,
+        "points": 150
+      },
+      {
+        "id": "st_m_4173",
+        "question": "What is the role of a rectifier in electronics?",
+        "options": [
+          "Convert DC to AC",
+          "Store charge",
+          "Convert AC to DC",
+          "Amplify signals"
+        ],
+        "correct": 2,
+        "points": 150
+      }
+    ],
+    "hard": [
+      {
+        "id": "st_h_9960",
+        "question": "What is the principle behind the working of a jet engine?",
+        "options": [
+          "Newton’s Third Law of Motion",
+          "Newton’s Third Law of Motion",
+          "Bernoullis principle",
+          "Archimedes principle"
+        ],
+        "correct": 0,
+        "points": 200
+      },
+      {
+        "id": "st_h_2465",
+        "question": "Which theorem states that no three classical states can be copied perfectly?",
+        "options": [
+          "Heisenberg Uncertainty",
+          "Bell’s Theorem",
+          "No-Cloning Theorem",
+          "Gödel’s Incompleteness"
+        ],
+        "correct": 2,
+        "points": 200
+      },
+      {
+        "id": "st_h_5723",
+        "question": "A phase-locked loop (PLL) is used in communication systems primarily for:",
+        "options": [
+          "Mixing frequencies",
+          "Amplifying signals",
+          "Synchronizing signal frequencies",
+          "Filtering noise"
+        ],
+        "correct": 2,
+        "points": 200
+      },
+      {
+        "id": "st_h_2621",
+        "question": "A zero-day vulnerability refers to a security flaw that:",
+        "options": [
+          "Is known to attackers but not to the software vendor",
+          "Has been patched but not yet implemented",
+          "Has been publicly disclosed with an available fix",
+          "Is theoretical and has not been exploited"
+        ],
+        "correct": 0,
+        "points": 200
+      },
+      {
+        "id": "st_h_7655",
+        "question": "The Nyquist stability criterion is used to determine the stability of a system by analyzing its",
+        "options": [
+          "State-space representation",
+          "Root locus",
+          "Frequency response",
+          "Time-domain response"
+        ],
+        "correct": 2,
+        "points": 200
+      },
+      {
+        "id": "st_h_9949",
+        "question": "In astrophysics, what does the Chandrasekhar Limit define?",
+        "options": [
+          "Maximum mass of a red dwarf star",
+          "Event horizon radius",
+          "Maximum mass of a white dwarf star",
+          "Age of the universe"
+        ],
+        "correct": 2,
+        "points": 200
+      },
+      {
+        "id": "st_h_64",
+        "question": "Which material is a topological insulator?",
+        "options": [
+          "Gallium Arsenide",
+          "Silicon Carbide",
+          "Bismuth Telluride",
+          "Graphene"
+        ],
+        "correct": 2,
+        "points": 200
+      }
+    ]
+  },
+  "General Knowledge & Current Affairs": {
+    "easy": [
+      {
+        "id": "gkca_e_1957",
+        "question": "Who is the current Chief Justice of India?",
+        "options": [
+          "Justice Sanjiv Khanna",
+          "Justice Sanjiv Khanna",
+          "Sharad Arvind Bobde",
+          "Uday Umesh Lalit"
+        ],
+        "correct": 0,
+        "points": 100
+      },
+      {
+        "id": "gkca_e_4965",
+        "question": "Who is the current Chief Justice of India?",
+        "options": [
+          "Sharad Arvind Bobde",
+          "Sanjiv Khanna",
+          "Uday Umesh Lalit",
+          "Dhananjaya Yeshwant Chandrachud"
+        ],
+        "correct": 1,
+        "points": 100
+      },
+      {
+        "id": "gkca_e_1761",
+        "question": "Which city is known as the \"Pink City\" of India?",
+        "options": ["Udaipur", "Jodhpur", "Jaipur", "Jaisalmer"],
+        "correct": 2,
+        "points": 100
+      },
+      {
+        "id": "gkca_e_6358",
+        "question": "Which country is known as the Land of the Rising Sun?",
+        "options": ["Philippines", "China", "South Korea", "Japan"],
+        "correct": 3,
+        "points": 100
+      },
+      {
+        "id": "gkca_e_5641",
+        "question": "In which year did the COVID-19 pandemic begin?",
+        "options": ["2021", "2019", "2018", "2020"],
+        "correct": 1,
+        "points": 100
+      },
+      {
+        "id": "gkca_e_8813",
+        "question": "Which Indian state is known as the \"Land of Five Rivers\"?",
+        "options": ["Karnataka", "Punjab", "Uttar Pradesh", "Haryana"],
+        "correct": 1,
+        "points": 100
+      },
+      {
+        "id": "gkca_e_9624",
+        "question": "Who is the author of the \"Harry Potter\" series?",
+        "options": [
+          "J.R.R. Tolkien",
+          "Mark Twain",
+          "George R.R. Martin",
+          "J.K. Rowling"
+        ],
+        "correct": 3,
+        "points": 100
+      },
+      {
+        "id": "gkca_e_1084",
+        "question": "Which city is known as the City of Joy?",
+        "options": ["Banaras", "Jaipur", "Kolkata", "Delhi"],
+        "correct": 2,
+        "points": 100
+      },
+      {
+        "id": "gkca_e_8240",
+        "question": "Which is considered as the biggest port of India ?",
+        "options": ["Cuttack", "Vishakhapatnam", "Pudducherry", "Mumbai"],
+        "correct": 3,
+        "points": 100
+      },
+      {
+        "id": "gkca_e_6449",
+        "question": "Who wrote the novel “War and Peace”?",
+        "options": [
+          "Ivan Turgenev",
+          "Leo Tolstoy",
+          "Anton Chekhov",
+          "Fyodor Dostoevsky"
+        ],
+        "correct": 1,
+        "points": 100
+      },
+      {
+        "id": "gkca_e_4118",
+        "question": "Which river flows through the Grand Canyon in the United States?",
+        "options": [
+          "The Colorado River",
+          "Missouri River",
+          "Mississippi River",
+          "Rio Grande River"
+        ],
+        "correct": 0,
+        "points": 100
+      }
+    ],
+    "moderate": [
+      {
+        "id": "gkca_m_82",
+        "question": "Which country launched the Artemis I mission?",
+        "options": ["Russia", "China", "Usa", "USA"],
+        "correct": 3,
+        "points": 150
+      },
+      {
+        "id": "gkca_m_4361",
+        "question": "In February 2025, which Indian financial institution launched the Financial Literacy Week?",
+        "options": [
+          "Reserve Bank of India",
+          "National Bank for Agriculture and Rural Development (NABARD)",
+          "State Bank of India",
+          "NITI Aayog"
+        ],
+        "correct": 0,
+        "points": 150
+      },
+      {
+        "id": "gkca_m_5665",
+        "question": "Which Indian state hosted the Global Investors Summit 2025 in February?",
+        "options": ["Madhya Pradesh", "Telangana", "Maharashtra", "Gujarat"],
+        "correct": 0,
+        "points": 150
+      },
+      {
+        "id": "gkca_m_82",
+        "question": "The Central Rice Research Station is situated in ?",
+        "options": ["Bangalore", "Delhi", "Chennai", "Cuttack"],
+        "correct": 3,
+        "points": 150
+      },
+      {
+        "id": "gkca_m_9179",
+        "question": "Which Italian artist is known for painting the ceiling of the Sistine Chapel in the Vatican?",
+        "options": [
+          "Pablo Picasso",
+          "Vincent van Gogh",
+          "Leonardo da Vinci",
+          "Michelangelo"
+        ],
+        "correct": 3,
+        "points": 150
+      },
+      {
+        "id": "gkca_m_2060",
+        "question": "In which state was India's first Glass Sea Bridge unveiled?",
+        "options": ["Tamil Nadu", "Odisha", "Gujarat", "Maharashtra"],
+        "correct": 0,
+        "points": 150
+      },
+      {
+        "id": "gkca_m_9083",
+        "question": "Where was the World Blitz Chess Championship held in 2024 ?",
+        "options": ["Paris", "New York", "Rome", "Chennai"],
+        "correct": 1,
+        "points": 150
+      },
+      {
+        "id": "gkca_m_797",
+        "question": "Which state has established \"Mahabharata Vatika\" for forest conservation?",
+        "options": ["Uttar Pradesh", "Uttarakhand", "Madhya Pradesh", "Assam"],
+        "correct": 1,
+        "points": 150
+      },
+      {
+        "id": "gkca_m_8428",
+        "question": "Which Indian mountaineer has recently made history by becoming the first person to scale Mt. Everest and Mt. Lhotse twice in one season?",
+        "options": [
+          "Satyadeep Gupta",
+          "Prerna Dangi",
+          "Ajeet Bajaj",
+          "Jai Vardhan Bahuguna"
+        ],
+        "correct": 0,
+        "points": 150
+      },
+      {
+        "id": "gkca_m_2993",
+        "question": "Which country has recently launched the CR450 prototype, the world’s fastest high-speed train?",
+        "options": ["India", "France", "Russia", "China"],
+        "correct": 3,
+        "points": 150
+      },
+      {
+        "id": "gkca_m_3752",
+        "question": "Which state won the best tableau award at the 76th Republic Day 2025?",
+        "options": ["Punjab", "Uttar Pradesh", "Himachal Pradesh", "Rajasthan"],
+        "correct": 1,
+        "points": 150
+      }
+    ],
+    "hard": [
+      {
+        "id": "gkca_h_1642",
+        "question": "On February 25, 1921, which city did the Red Army enter, leading to the establishment of the Georgian Soviet Socialist Republic?",
+        "options": ["Sukhumi", "Tbilisi", "Kutaisi", "Batumi"],
+        "correct": 1,
+        "points": 200
+      },
+      {
+        "id": "gkca_h_4047",
+        "question": "Who was the leader of the Soviet Union during the Cuban Missile Crisis?",
+        "options": [
+          "Nikita Khrushchev",
+          "Joseph Stalin",
+          "Leonid Brezhnev",
+          "Yuri Andropov"
+        ],
+        "correct": 0,
+        "points": 200
+      },
+      {
+        "id": "gkca_h_5733",
+        "question": "What is the northernmost capital city in the world?",
+        "options": ["Reykjavik", "Oslo", "Tallinn", "Helsinki"],
+        "correct": 0,
+        "points": 200
+      },
+      {
+        "id": "gkca_h_3751",
+        "question": "Which country recently announced export controls and increased tariffs on certain American imports in retaliation for U.S. tariffs?",
+        "options": ["Russia", "China", "Brazil", "India"],
+        "correct": 1,
+        "points": 200
+      },
+      {
+        "id": "gkca_h_40",
+        "question": "Gandikota Canyon of South India was created by which one of the following rivers?",
+        "options": ["Tungabhadra", "Manjira", "Pennar", "Cauvery"],
+        "correct": 2,
+        "points": 200
+      },
+      {
+        "id": "gkca_h_4604",
+        "question": "Who has been appointed as the new Director General of the Central Reserve Police Force (CRPF)?",
+        "options": [
+          "A.P. Maheshwari",
+          "Gyanendra Pratap Singh",
+          "O P Singh",
+          "Prakash Mishra"
+        ],
+        "correct": 1,
+        "points": 200
+      },
+      {
+        "id": "gkca_h_927",
+        "question": "Which ancient city is believed to have been the first in the world to reach a population of one million?",
+        "options": ["Rome", "Babylon", "Alexandria", "Beijing"],
+        "correct": 0,
+        "points": 200
+      },
+      {
+        "id": "gkca_h_3574",
+        "question": "Which oceanic trench is the second deepest after the Mariana Trench?",
+        "options": [
+          "Philippine Trench",
+          "Puerto Rico Trench",
+          "Tonga Trench",
+          "Java Trench"
+        ],
+        "correct": 2,
+        "points": 200
+      },
+      {
+        "id": "gkca_h_144",
+        "question": "Which book was the first to be printed using movable type?",
+        "options": [
+          "The Torah",
+          "The Gutenberg Bible",
+          "The Canterbury Tales",
+          "The Book of Kells"
+        ],
+        "correct": 1,
+        "points": 200
+      },
+      {
+        "id": "gkca_h_8166",
+        "question": "Swatantra Sainik Samman Pension Scheme was launched by which ministry?",
+        "options": [
+          "Ministry of Defence",
+          "Ministry of Finance",
+          "Ministry of Science and Technology",
+          "Ministry of Home Affairs"
+        ],
+        "correct": 3,
+        "points": 200
+      }
+    ]
+  },
+  "Movies & Entertainment": {
+    "easy": [
+      {
+        "id": "me_e_5645",
+        "question": "Which director is known for creating the \"Dark Knight\" trilogy?",
+        "options": [
+          "Martin Scorsese",
+          "Steven Spielberg",
+          "Christopher nolan",
+          "Christopher nolan"
+        ],
+        "correct": 2,
+        "points": 100
+      },
+      {
+        "id": "me_e_9935",
+        "question": "Who won Best Actor Award on Oscar's 2024?",
+        "options": [
+          "Cillian Murphy",
+          "Bradley Cooper",
+          "Robert Downey Jr.",
+          "Cillian Murphy"
+        ],
+        "correct": 0,
+        "points": 100
+      },
+      {
+        "id": "me_e_4712",
+        "question": "Who is the director of the Avatar movie series?",
+        "options": [
+          "Steven Spielberg",
+          "Martin Scorsese",
+          "David Fincher",
+          "James Cameron"
+        ],
+        "correct": 3,
+        "points": 100
+      },
+      {
+        "id": "me_e_9452",
+        "question": "In the \"Star Wars\" series, what is the name of Han Solo's ship?",
+        "options": [
+          "The X-Wing",
+          "The Millennium Falcon",
+          "The Star Destroyer",
+          "The TIE Fighter"
+        ],
+        "correct": 1,
+        "points": 100
+      },
+      {
+        "id": "me_e_3010",
+        "question": "In the movie \"Inception,\" what is the main method characters use to enter another person's dreams?",
+        "options": [
+          "Using a dream-sharing device",
+          "By falling asleep naturally",
+          "Through a special door",
+          "By taking a pill"
+        ],
+        "correct": 0,
+        "points": 100
+      },
+      {
+        "id": "me_e_9632",
+        "question": "Which actor portrayed the character of Jack Dawson in the 1997 film \"Titanic\"?",
+        "options": [
+          "Brad Pitt",
+          "Leonardo DiCaprio",
+          "Matt Damon",
+          "Tom Cruise"
+        ],
+        "correct": 1,
+        "points": 100
+      },
+      {
+        "id": "me_e_8791",
+        "question": "Who played the role of Amarendran Baahubali in the Baahubali series?",
+        "options": ["Nivin Pauly", "Rana Daggubati", "Sudeep", "Prabhas"],
+        "correct": 3,
+        "points": 100
+      },
+      {
+        "id": "me_e_1732",
+        "question": "Which is the first Indian movie to win an Oscar?",
+        "options": [
+          "The Elephant Whisperers (2023)",
+          "RRR (2022)",
+          "Lagaan (2001)",
+          "Mother India (1957)"
+        ],
+        "correct": 0,
+        "points": 100
+      },
+      {
+        "id": "me_e_6076",
+        "question": "Who directed the Malayalam classic Manichitrathazhu?",
+        "options": [
+          "Sathyan Anthikad",
+          "Shaji Kailas",
+          "Priyadarshan",
+          "Fazil"
+        ],
+        "correct": 3,
+        "points": 100
+      },
+      {
+        "id": "me_e_4722",
+        "question": "What is the real name of Mammootty?",
+        "options": [
+          "K. P. Ummer",
+          "Thomas Mathew",
+          "Raghavan Nair",
+          "Muhammad Kutty Panaparambil Ismail"
+        ],
+        "correct": 3,
+        "points": 100
+      },
+      {
+        "id": "me_e_5268",
+        "question": "Which movie popularized the dialogue \"Entammede Jimikki Kammal\"?",
+        "options": [
+          "Premam",
+          "Kumbalangi Nights",
+          "Velipadinte Pusthakam",
+          "Bangalore Days"
+        ],
+        "correct": 2,
+        "points": 100
+      },
+      {
+        "id": "me_e_2021",
+        "question": "Who played the role of the antagonist Bhavani in Master (2021)?",
+        "options": ["Fahadh Faasil", "Dhanush", "Vijay Sethupathi", "Suriya"],
+        "correct": 2,
+        "points": 100
+      },
+      {
+        "id": "me_e_2609",
+        "question": "What is the name of the first full-length Malayalam talkie film?",
+        "options": ["Neelakkuyil", "Newspaper Boy", "Balan (1938)", "Chemmeen"],
+        "correct": 2,
+        "points": 100
+      },
+      {
+        "id": "me_e_9642",
+        "question": "Which Hollywood movie is based on the sinking of the Titanic?",
+        "options": ["Poseidon", "The Perfect Storm", "Jaws", "Titanic (1997)"],
+        "correct": 3,
+        "points": 100
+      },
+      {
+        "id": "me_e_9993",
+        "question": "Who is the composer of the Oscar-winning song Naatu Naatu?",
+        "options": [
+          "M. M. Keeravani",
+          "Devi Sri Prasad",
+          "A. R. Rahman",
+          "Anirudh Ravichander"
+        ],
+        "correct": 0,
+        "points": 100
+      },
+      {
+        "id": "me_e_4803",
+        "question": "In Premam, what is the name of Nivin Pauly’s first love interest?",
+        "options": ["Celine", "Mary", "Jancy", "Malar"],
+        "correct": 1,
+        "points": 100
+      }
+    ],
+    "moderate": [
+      {
+        "id": "me_m_8031",
+        "question": "Which was the first Indian movie nominated for Oscar?",
+        "options": ["Salaam Bombay", "Mother India", "Mother India", "Lagaan"],
+        "correct": 1,
+        "points": 150
+      },
+      {
+        "id": "me_m_6630",
+        "question": "In the Harry Potter series, what spell does Snape use to kill Dumbledore?",
+        "options": [
+          "Avada Kedavra",
+          "Sectumsempra",
+          "Expecto Patronum",
+          "Wingardium Leviosa"
+        ],
+        "correct": 0,
+        "points": 150
+      },
+      {
+        "id": "me_m_6637",
+        "question": "The Oscar-winning Korean movie \"Parasite\" was directed by whom?",
+        "options": [
+          "Kim Jee-woon",
+          "Park Chan-wook",
+          "Bong Joon-ho",
+          "Lee Chang-dong"
+        ],
+        "correct": 2,
+        "points": 150
+      },
+      {
+        "id": "me_m_9659",
+        "question": "Which actor has appeared in films such as \"Fight Club,\" \"Ocean's Eleven,\" and \"Once Upon a Time in Hollywood\"?",
+        "options": [
+          "Brad Pitt",
+          "Matt Damon",
+          "George Clooney",
+          "Leonardo DiCaprio"
+        ],
+        "correct": 0,
+        "points": 150
+      },
+      {
+        "id": "me_m_7227",
+        "question": "Which was the first Indian film to be nominated for an Oscar in the Best Foreign Language Film category?",
+        "options": [
+          "Salaam Bombay! (1988)",
+          "Mother India (1957)",
+          "The Lunchbox (2013)",
+          "Lagaan (2001)"
+        ],
+        "correct": 1,
+        "points": 150
+      },
+      {
+        "id": "me_m_1511",
+        "question": "In Drishyam (2013), what was the fake alibi date that Georgekutty created?",
+        "options": ["August 15th", "September 5th", "July 31st", "August 2nd"],
+        "correct": 3,
+        "points": 150
+      },
+      {
+        "id": "me_m_6222",
+        "question": "Which Malayalam film was India's official entry for the Oscars in 2023?",
+        "options": [
+          "Jallikattu",
+          "Joji",
+          "2018: Everyone is a Hero",
+          "Kumbalangi Nights"
+        ],
+        "correct": 2,
+        "points": 150
+      },
+      {
+        "id": "me_m_323",
+        "question": "In Nadodikattu (1987), what are the names of Mohanlal and Sreenivasan’s iconic characters?",
+        "options": [
+          "Ramji Rao and Mannar Mathai",
+          "Dasan and Vijayan",
+          "Hari and Krishnan",
+          "Raju and Velu"
+        ],
+        "correct": 1,
+        "points": 150
+      },
+      {
+        "id": "me_m_7036",
+        "question": "Which Malayalam film introduced the trend of 'new-gen' cinema with realistic storytelling and stylish filmmaking?",
+        "options": [
+          "Premam (2015)",
+          "Traffic (2011)",
+          "Ustad Hotel (2012)",
+          "Bangalore Days (2014)"
+        ],
+        "correct": 1,
+        "points": 150
+      },
+      {
+        "id": "me_m_9705",
+        "question": "In Baahubali: The Beginning, what is the name of the waterfall where Shivudu grows up?",
+        "options": [
+          "Kattappa Falls",
+          "Gandikota Falls",
+          "Rudraprayag Falls",
+          "Mahishmati Falls"
+        ],
+        "correct": 3,
+        "points": 150
+      },
+      {
+        "id": "me_m_6666",
+        "question": "Which Malayalam film character is famous for the dialogue, \"Ellam sheriyakum\"?",
+        "options": [
+          "Raghavan (Kaakha Kaakha)",
+          "Dasan (Nadodikattu)",
+          "Ayyappan Nair (Ayyappanum Koshiyum)",
+          "Naran (Naran)"
+        ],
+        "correct": 2,
+        "points": 150
+      },
+      {
+        "id": "me_m_7136",
+        "question": "What is the name of the first Indian silent feature film?",
+        "options": [
+          "Sant Tukaram",
+          "Kisan Kanya",
+          "Raja Harishchandra (1913)",
+          "Alam Ara"
+        ],
+        "correct": 2,
+        "points": 150
+      },
+      {
+        "id": "me_m_4414",
+        "question": "Who composed the background score for KGF: Chapter 1?",
+        "options": [
+          "Ravi Basrur",
+          "Anirudh Ravichander",
+          "Devi Sri Prasad",
+          "Harris Jayaraj"
+        ],
+        "correct": 0,
+        "points": 150
+      },
+      {
+        "id": "me_m_7970",
+        "question": "In Kumbalangi Nights, which actor played the toxic, obsessive antagonist Shammi?",
+        "options": [
+          "Fahadh Faasil",
+          "Joju George",
+          "Indrajith Sukumaran",
+          "Tovino Thomas"
+        ],
+        "correct": 0,
+        "points": 150
+      }
+    ],
+    "hard": [
+      {
+        "id": "me_h_93",
+        "question": "Who was awarded the National Kishore Kumar Award in Khandwa, Madhya Pradesh on the occasion of the 37th death anniversary of Kishore Kumar?",
+        "options": [
+          "Rajkumar Hirani",
+          "Rakesh Roshan",
+          "Rajkumar Hirani",
+          "Sanjay Leela Bhansali"
+        ],
+        "correct": 0,
+        "points": 200
+      },
+      {
+        "id": "me_h_2363",
+        "question": "In \"The Lord of the Rings\" trilogy, what is the name of Frodo's sword that glows blue when orcs are nearby?",
+        "options": ["Andúril", "Glamdring", "Sting", "Narsil"],
+        "correct": 2,
+        "points": 200
+      },
+      {
+        "id": "me_h_2779",
+        "question": "In Chidambaram (1985), directed by G. Aravindan, what is the primary theme of the film?",
+        "options": [
+          "Social Hierarchy and Power",
+          "Caste-based Discrimination",
+          "Political Corruption",
+          "Guilt and Redemption"
+        ],
+        "correct": 3,
+        "points": 200
+      },
+      {
+        "id": "me_h_4800",
+        "question": "Which was the first 70mm film in Malayalam cinema?",
+        "options": [
+          "Padayottam (1982)",
+          "His Highness Abdullah",
+          "Oru Vadakkan Veeragatha",
+          "Kaalapani"
+        ],
+        "correct": 0,
+        "points": 200
+      },
+      {
+        "id": "me_h_9280",
+        "question": "In Ustad Hotel, what was the name of the dish that Faizi (Dulquer Salmaan) cooked for the food critic in the climax?",
+        "options": [
+          "Malabar Biryani",
+          "Kozhi Nirachathu",
+          "Pathiri",
+          "Sulaimani Chai"
+        ],
+        "correct": 3,
+        "points": 200
+      },
+      {
+        "id": "me_h_4875",
+        "question": "Which of these directors has never won a National Award for Best Direction?",
+        "options": [
+          "Lijo Jose Pellissery",
+          "G. Aravindan",
+          "Priyanandanan",
+          "Adoor Gopalakrishnan"
+        ],
+        "correct": 0,
+        "points": 200
+      },
+      {
+        "id": "me_h_4531",
+        "question": "In Piravi (1989), the film follows an old father searching for his missing son. What was his son's profession?",
+        "options": [
+          "Government Clerk",
+          "Journalist",
+          "School Teacher",
+          "Engineering Student"
+        ],
+        "correct": 3,
+        "points": 200
+      },
+      {
+        "id": "me_h_9877",
+        "question": "In Maheshinte Prathikaaram, what was the name of Mahesh’s pet dog?",
+        "options": ["Chinnan", "Thangal", "Ayyappan", "Paili"],
+        "correct": 2,
+        "points": 200
+      },
+      {
+        "id": "me_h_6883",
+        "question": "Which Indian film was officially the first to feature Dolby Atmos sound?",
+        "options": [
+          "Krrish 3 (2013)",
+          "Baahubali: The Beginning (2015)",
+          "Enthiran (2010)",
+          "Viswaroopam (2013)"
+        ],
+        "correct": 3,
+        "points": 200
+      },
+      {
+        "id": "me_h_1830",
+        "question": "Which was the first Indian film to win the Golden Peacock Award at the International Film Festival of India (IFFI)?",
+        "options": [
+          "Shyamchi Aai (1953)",
+          "Pather Panchali",
+          "Do Bigha Zamin",
+          "Meghe Dhaka Tara"
+        ],
+        "correct": 0,
+        "points": 200
+      },
+      {
+        "id": "me_h_6717",
+        "question": "In Classmates (2006), what is the name of the song that plays during the flashback romantic sequences between Murali and Thara?",
+        "options": [
+          "Kattadi Thanalum",
+          "Manjukaalam Kazhinju",
+          "Enikkore Oru Swapnam Undu",
+          "Ente Khalbile Vennilavu Nee"
+        ],
+        "correct": 3,
+        "points": 200
+      },
+      {
+        "id": "me_h_4552",
+        "question": "Who was the first Malayalam film personality to receive the Dadasaheb Phalke Award?",
+        "options": [
+          "Adoor Gopalakrishnan",
+          "Madhu",
+          "M. T. Vasudevan Nair",
+          "G. Aravindan"
+        ],
+        "correct": 0,
+        "points": 200
+      }
+    ]
+  },
+  "Geography & Travel": {
+    "easy": [
+      {
+        "id": "gt_e_5818",
+        "question": "What is the longest river in the world?",
+        "options": ["Amazon", "Nile", "Yangzte", "Nile"],
+        "correct": 1,
+        "points": 100
+      },
+      {
+        "id": "gt_e_4784",
+        "question": "1. What is the capital city of France?",
+        "options": ["Paris", "Berlin", "Rome", "Madrid"],
+        "correct": 0,
+        "points": 100
+      },
+      {
+        "id": "gt_e_2719",
+        "question": "Which continent is known as the \"Land Down Under\"?",
+        "options": ["South America", "Australia", "Africa", "Asia"],
+        "correct": 1,
+        "points": 100
+      },
+      {
+        "id": "gt_e_9428",
+        "question": "Which river is the longest in the world?",
+        "options": [
+          "Mississippi River",
+          "Yangtze River",
+          "Nile River",
+          "Amazon River"
+        ],
+        "correct": 2,
+        "points": 100
+      },
+      {
+        "id": "gt_e_530",
+        "question": "Which country has the most time zones, considering all its territories?",
+        "options": ["France", "United States", "Russia", "China"],
+        "correct": 0,
+        "points": 100
+      },
+      {
+        "id": "gt_e_3178",
+        "question": "Which of these capital cities is not the largest city in its country?",
+        "options": [
+          "Ottawa, Canada",
+          "Canberra, Australia",
+          "All of the above",
+          "Washington D.C., USA"
+        ],
+        "correct": 2,
+        "points": 100
+      },
+      {
+        "id": "gt_e_2745",
+        "question": "Which of the following countries does not have a desert?",
+        "options": ["Canada", "Iceland", "United Kingdom", "Greenland"],
+        "correct": 2,
+        "points": 100
+      },
+      {
+        "id": "gt_e_8223",
+        "question": "Which country is closest to the United States, excluding Canada and Mexico?",
+        "options": ["Greenland", "Russia", "Cuba", "The Bahamas"],
+        "correct": 1,
+        "points": 100
+      },
+      {
+        "id": "gt_e_4757",
+        "question": "Which country has the most time zones?",
+        "options": ["USA", "France", "Russia", "France"],
+        "correct": 1,
+        "points": 100
+      },
+      {
+        "id": "gt_e_1532",
+        "question": "Which of these cities is the furthest south?",
+        "options": [
+          "Cape Town, South Africa",
+          "Buenos Aires, Argentina",
+          "Sydney, Australia",
+          "Wellington, New Zealand"
+        ],
+        "correct": 3,
+        "points": 100
+      },
+      {
+        "id": "gt_e_6143",
+        "question": "Which is the only sea without a coastline?",
+        "options": ["Caspian Sea", "Sargasso Sea", "Red Sea", "Sargasso Sea"],
+        "correct": 1,
+        "points": 100
+      },
+      {
+        "id": "gt_e_7756",
+        "question": "2. Which city is known as the \"Venice of the North\"?",
+        "options": [
+          "Saint Petersburg",
+          "Amsterdam",
+          "Stockholm",
+          "Saint Petersburg"
+        ],
+        "correct": 0,
+        "points": 100
+      }
+    ],
+    "moderate": [
+      {
+        "id": "gt_m_9559",
+        "question": "What is the official language of Brazil?",
+        "options": ["Spanish", "Portuguese", "Brazilian", "Galician"],
+        "correct": 1,
+        "points": 150
+      },
+      {
+        "id": "gt_m_8842",
+        "question": "Which country has the most time zones?",
+        "options": ["Russia", "Ecuador", "France", "USA"],
+        "correct": 2,
+        "points": 150
+      },
+      {
+        "id": "gt_m_4611",
+        "question": "Mount Everest, the world's highest peak, is located on the border of which two countries?",
+        "options": [
+          "India and Nepal",
+          "China and India",
+          "Pakistan and China",
+          "Nepal and China"
+        ],
+        "correct": 3,
+        "points": 150
+      },
+      {
+        "id": "gt_m_2550",
+        "question": "Which U.S. state is known as the \"Sunshine State\"?",
+        "options": ["Texas", "California", "Arizona", "Florida"],
+        "correct": 3,
+        "points": 150
+      },
+      {
+        "id": "gt_m_2883",
+        "question": "The city of Tokyo is the capital of which country?",
+        "options": ["Thailand", "South Korea", "Japan", "China"],
+        "correct": 2,
+        "points": 150
+      },
+      {
+        "id": "gt_m_6121",
+        "question": "Which desert is the largest hot desert in the world?",
+        "options": [
+          "Sahara Desert",
+          "Gobi Desert",
+          "Arabian Desert",
+          "Kalahari Desert"
+        ],
+        "correct": 0,
+        "points": 150
+      }
+    ],
+    "hard": [
+      {
+        "id": "gt_h_5603",
+        "question": "The Atacama Desert is located in which country?",
+        "options": ["Bolivia", "Chile", "Peru", "Argentina"],
+        "correct": 1,
+        "points": 200
+      },
+      {
+        "id": "gt_h_6645",
+        "question": "Which country has the longest coastline in the world?",
+        "options": ["Australia", "Russia", "Canada", "Indonesia"],
+        "correct": 2,
+        "points": 200
+      },
+      {
+        "id": "gt_h_7061",
+        "question": "What is the smallest country in the world by land area?",
+        "options": ["Monaco", "San Marino", "Vatican City", "Nauru"],
+        "correct": 2,
+        "points": 200
+      },
+      {
+        "id": "gt_h_8810",
+        "question": "Which African country was formerly known as Abyssinia?",
+        "options": ["Snomalia", "Ethiopia", "Sudan", "Eritrea"],
+        "correct": 1,
+        "points": 200
+      },
+      {
+        "id": "gt_h_8941",
+        "question": "Which country has the most time zones?",
+        "options": ["United States", "Canada", "France", "France"],
+        "correct": 2,
+        "points": 200
+      },
+      {
+        "id": "gt_h_956",
+        "question": "Which river is the longest in the world?",
+        "options": [
+          "Amazon River",
+          "Nile River(though some argue for the Amazon)",
+          "Nile River",
+          "Yangtze River"
+        ],
+        "correct": 1,
+        "points": 200
+      },
+      {
+        "id": "gt_h_8828",
+        "question": "Which sea is the only one without coastline?",
+        "options": ["Black Sea", "Red Sea", "Sargasoo Sea", "Sargasoo Sea"],
+        "correct": 2,
+        "points": 200
+      },
+      {
+        "id": "gt_h_4745",
+        "question": "Which country is not the part of golden triangle in the south east asia?",
+        "options": ["Vietnam", "Laos", "Thailand", "Vietnam"],
+        "correct": 0,
+        "points": 200
+      },
+      {
+        "id": "gt_h_6016",
+        "question": "Which country has the longest coastline?",
+        "options": ["Canada", "Indonesia", "Australia", "Canada"],
+        "correct": 0,
+        "points": 200
+      },
+      {
+        "id": "gt_h_9438",
+        "question": "Which European country has the longest coastline?",
+        "options": ["Greece", "Italy", "Norway", "Norway"],
+        "correct": 2,
+        "points": 200
+      },
+      {
+        "id": "gt_h_912",
+        "question": "Which country is home to the highest waterfall, Angel Falls",
+        "options": ["Brazil", "Venezuela", "Venezuela", "United kingdom"],
+        "correct": 1,
+        "points": 200
+      },
+      {
+        "id": "gt_h_2015",
+        "question": "Which country is not landlocked?",
+        "options": ["Paraguay", "Mongolia", "Croatia", "Croatia"],
+        "correct": 2,
+        "points": 200
+      }
+    ]
+  },
+  "Indian History & Culture": {
+    "easy": [
+      {
+        "id": "ihc_e_3040",
+        "question": "When was the Constitution of India adopted?",
+        "options": [
+          "January 26, 1950",
+          "January 26, 1949",
+          "November 26, 1950",
+          "November 26, 1949"
+        ],
+        "correct": 3,
+        "points": 100
+      },
+      {
+        "id": "ihc_e_6188",
+        "question": "Who was the first President of independent India?",
+        "options": [
+          "Dr. S. Radhakrishnan",
+          "Lala Lajpat Rai",
+          "Jawaharlal Nehru",
+          "Dr. Rajendra Prasad"
+        ],
+        "correct": 3,
+        "points": 100
+      },
+      {
+        "id": "ihc_e_2286",
+        "question": "Who was the first woman Prime Minister of India?",
+        "options": [
+          "Pratibha Patil",
+          "Sarojini Naidu",
+          "Vijayalakshmi Pandit",
+          "Indira Gandhi"
+        ],
+        "correct": 3,
+        "points": 100
+      },
+      {
+        "id": "ihc_e_1905",
+        "question": "Which is the national flower of India?",
+        "options": ["Rose", "Lotus", "Jasmine", "Marigold"],
+        "correct": 1,
+        "points": 100
+      },
+      {
+        "id": "ihc_e_8048",
+        "question": "Who wrote the national anthem of India?",
+        "options": [
+          "Subramania Bharati",
+          "Rabindranath Tagore",
+          "Subhas Chandra Bose",
+          "Bankim Chandra Chattopadhyay"
+        ],
+        "correct": 3,
+        "points": 100
+      },
+      {
+        "id": "ihc_e_7569",
+        "question": "Which Indian emperor embraced Buddhism after the Kalinga War?",
+        "options": ["Chandragupta Maurya", "Samudragupta", "Harsha", "Ashoka"],
+        "correct": 3,
+        "points": 100
+      },
+      {
+        "id": "ihc_e_7688",
+        "question": "Which is the traditional dance form of Rajasthan?",
+        "options": ["Kathak", "Ghoomar", "Garba", "Bhangra"],
+        "correct": 1,
+        "points": 100
+      },
+      {
+        "id": "ihc_e_7286",
+        "question": "Which is the traditional dance form of Andhra Pradesh?",
+        "options": ["Kuchipudi", "Bharatnatyam", "Bihu", "Kathak"],
+        "correct": 0,
+        "points": 100
+      },
+      {
+        "id": "ihc_e_8153",
+        "question": "Which festival is celebrated to mark the victory of good over evil and the return of Lord Rama to Ayodhya?",
+        "options": ["Diwali", "Navratri", "Holi", "Ram Navami"],
+        "correct": 0,
+        "points": 100
+      },
+      {
+        "id": "ihc_e_1411",
+        "question": "Which Indian city is known as the 'Pink City'?",
+        "options": ["Jaipur", "Mumbai", "Kolkata", "Jodhpur"],
+        "correct": 0,
+        "points": 100
+      },
+      {
+        "id": "ihc_e_3343",
+        "question": "In which of these places, is the Kumbh Mela celebrated?",
+        "options": ["Kedarnath", "Haridwar", "Bhopal", "Benaras"],
+        "correct": 1,
+        "points": 100
+      }
+    ],
+    "moderate": [
+      {
+        "id": "ihc_m_3404",
+        "question": "Who was the last governor-general of independent India?",
+        "options": [
+          "Rajendra Prasad",
+          "Lord Mountbatten",
+          "Warren Hastings",
+          "C. Rajagopalachari"
+        ],
+        "correct": 3,
+        "points": 150
+      },
+      {
+        "id": "ihc_m_2096",
+        "question": "Who was the first Indian to win a Nobel Prize?",
+        "options": [
+          "Rabindranath Tagore",
+          "Subrahmanyan Chandrasekhar",
+          "C V Raman",
+          "Venkatraman Ramakrishnan"
+        ],
+        "correct": 0,
+        "points": 150
+      },
+      {
+        "id": "ihc_m_5643",
+        "question": "Who was the founder of the Gupta Empire?",
+        "options": ["Chandragupta", "Bindusara", "Skandagupta", "Samudragupta"],
+        "correct": 0,
+        "points": 150
+      },
+      {
+        "id": "ihc_m_9121",
+        "question": "Which of the following is the traditional attire for women in Gujarat?",
+        "options": [
+          "Salwar-kameez",
+          "Ghagra-choli",
+          "Lehenga-choli",
+          "Sherwani"
+        ],
+        "correct": 1,
+        "points": 150
+      },
+      {
+        "id": "ihc_m_4847",
+        "question": "Buddha, Dhamma, and Sangha together are known as which of the following?",
+        "options": ["Trivargu", "Triratna", "Trimurti", "Trirvarna"],
+        "correct": 1,
+        "points": 150
+      },
+      {
+        "id": "ihc_m_1442",
+        "question": "The Great Bath was found at which Indus Valley Civilization site?",
+        "options": ["Kalibangan", "Lothal", "Mohenjo-Daro", "Harappa"],
+        "correct": 2,
+        "points": 150
+      },
+      {
+        "id": "ihc_m_9872",
+        "question": "When was the Constitution of India adopted?",
+        "options": [
+          "January 26, 1949",
+          "August 15, 1947",
+          "November 26, 1949",
+          "November 26, 1950"
+        ],
+        "correct": 2,
+        "points": 150
+      },
+      {
+        "id": "ihc_m_3546",
+        "question": "Which event sparked the Revolt of 1857?",
+        "options": [
+          "Jallianwala Bagh massacre",
+          "Use of Enfield rifles by Indian soldiers",
+          "High taxation policies",
+          "Introduction of the Rowlatt Act"
+        ],
+        "correct": 1,
+        "points": 150
+      },
+      {
+        "id": "ihc_m_9896",
+        "question": "Kambala Sport is mainly held in which state?",
+        "options": ["Kerala", "Karnataka", "Gujarat", "Tamil Nadu"],
+        "correct": 1,
+        "points": 150
+      },
+      {
+        "id": "ihc_m_7702",
+        "question": "Which of the following musical instruments is of foreign origin?",
+        "options": ["Sitar", "Flute", "Tabla", "Violin"],
+        "correct": 1,
+        "points": 150
+      },
+      {
+        "id": "ihc_m_8528",
+        "question": "Which of the following sites of India is a UNESCO World Heritage Site?",
+        "options": [
+          "Gateway of India",
+          "Ellora caves",
+          "Lotus Temple",
+          "Meenakshi Temple"
+        ],
+        "correct": 1,
+        "points": 150
+      }
+    ],
+    "hard": [
+      {
+        "id": "ihc_h_2991",
+        "question": "Who was the founder of the Vijayanagara Empire?",
+        "options": [
+          "Harihara I",
+          "Harihara II",
+          "Saluva Narasimha",
+          "Krishnadevaraya"
+        ],
+        "correct": 0,
+        "points": 200
+      },
+      {
+        "id": "ihc_h_7381",
+        "question": "Which traditional Indian art form involves painting on wet plaster?",
+        "options": ["Fresco", "Terracotta", "Madhubani", "Pattachitra"],
+        "correct": 0,
+        "points": 200
+      },
+      {
+        "id": "ihc_h_5876",
+        "question": "The 'Battle of Plassey' was fought in which year?",
+        "options": ["1757", "1761", "1775", "1747"],
+        "correct": 0,
+        "points": 200
+      },
+      {
+        "id": "ihc_h_4489",
+        "question": "Who was the first Tirthankara in Jainism?",
+        "options": ["Mahavira", "Naminatha", "Parsavanath", "Rishabhanatha"],
+        "correct": 3,
+        "points": 200
+      },
+      {
+        "id": "ihc_h_7958",
+        "question": "Which Sultan of Delhi established the city of Agra?",
+        "options": [
+          "Firoz Shah Tughluq",
+          "Ibrahim Lodhi",
+          "Iltutmish",
+          "Sikandar Lodi"
+        ],
+        "correct": 3,
+        "points": 200
+      },
+      {
+        "id": "ihc_h_9706",
+        "question": "The famous battle of Panipat in 1526 was fought between?",
+        "options": [
+          "Aurangzeb and Dara Shikoh",
+          "Babur and Ibrahim Lodi",
+          "Akbar and Hemu",
+          "Sher Shah Suri and Humayun"
+        ],
+        "correct": 1,
+        "points": 200
+      },
+      {
+        "id": "ihc_h_7476",
+        "question": "Who was the founder of the Vijayanagara Empire?",
+        "options": [
+          "Narasimha Raya II.",
+          "Krishnadevaraya",
+          "Harihara I",
+          "Saluva Narasimha Deva Raya"
+        ],
+        "correct": 2,
+        "points": 200
+      },
+      {
+        "id": "ihc_h_9332",
+        "question": "Padam, Javali, Kriti and Keerthanam are varnams of which of the following dance forms?",
+        "options": ["Bharatnatyam", "Kathak", "Kuchipudi", "Manipuri"],
+        "correct": 0,
+        "points": 200
+      },
+      {
+        "id": "ihc_h_679",
+        "question": "Who composed the Tamil epic ‘Silappathikaram’?",
+        "options": ["Kamban", "Thiruvalluvar", "Ilango Adigal", "Sekkizhar"],
+        "correct": 2,
+        "points": 200
+      },
+      {
+        "id": "ihc_h_524",
+        "question": "Who was the author of ‘Ain-i-Akbari’?",
+        "options": ["Todar Mal", "Abu'l Fazl", "Birbal", "Tansen"],
+        "correct": 1,
+        "points": 200
+      },
+      {
+        "id": "ihc_h_672",
+        "question": "Which committee recommended the establishment of Panchayati Raj in India?",
+        "options": [
+          "Balwant Rai Mehta Committee",
+          "Simon Commission",
+          "Sarkaria Commission",
+          "Ashok Mehta Committee"
+        ],
+        "correct": 0,
+        "points": 200
+      },
+      {
+        "id": "ihc_h_265",
+        "question": "Who among the following is considered to be the originator of the trivat and tarana styles of Hindustani Classical Music?",
+        "options": [
+          "Tansen",
+          "Mohammad Shah Rangile",
+          "Amir Khusro",
+          "Niyamat Khan"
+        ],
+        "correct": 2,
+        "points": 200
+      }
+    ]
+  },
+  "Mythology": {
+    "easy": [
+      {
+        "id": "m_e_7701",
+        "question": "In Hindu mythology, who is the king of the gods?",
+        "options": ["Indra", "Kubera", "Vishnu", "Brahma"],
+        "correct": 0,
+        "points": 100
+      },
+      {
+        "id": "m_e_7736",
+        "question": "In Greek mythology, who is the king of the gods?",
+        "options": ["Hades", "Poseidon", "Zeus", "Apollo"],
+        "correct": 2,
+        "points": 100
+      },
+      {
+        "id": "m_e_9390",
+        "question": "In Greek mythology, who is the king of the gods?",
+        "options": ["Ares", "Poseidon", "Zeus", "Hades"],
+        "correct": 2,
+        "points": 100
+      },
+      {
+        "id": "m_e_1247",
+        "question": "Which Norse god is known for wielding the hammer Mjolnir?",
+        "options": ["Thor", "Loki", "Odin", "Frey"],
+        "correct": 0,
+        "points": 100
+      },
+      {
+        "id": "m_e_3293",
+        "question": "In Egyptian mythology, who is the god of the sun?",
+        "options": ["Thoth", "Anubis", "Horus", "Ra"],
+        "correct": 3,
+        "points": 100
+      },
+      {
+        "id": "m_e_8745",
+        "question": "In Hindu mythology, who is the god of destruction?",
+        "options": ["Brahma", "Krishna", "Vishnu", "Shiva"],
+        "correct": 3,
+        "points": 100
+      },
+      {
+        "id": "m_e_2871",
+        "question": "What is the name of the hero who slew Medusa in Greek mythology?",
+        "options": ["Perseus", "Perseus", "Achilles", "Hercules"],
+        "correct": 0,
+        "points": 100
+      },
+      {
+        "id": "m_e_8893",
+        "question": "In Roman mythology, who is the goddess of love?",
+        "options": ["Venus", "Diana", "Juno", "Minerva"],
+        "correct": 0,
+        "points": 100
+      },
+      {
+        "id": "m_e_3743",
+        "question": "Which animal is sacred to the Hindu god Ganesha?",
+        "options": ["Monkey", "Cow", "Mouse", "Elephant"],
+        "correct": 2,
+        "points": 100
+      },
+      {
+        "id": "m_e_6297",
+        "question": "who is the norse god of mischief?",
+        "options": ["Loki", "Tyr", "Heimdall", "Balder"],
+        "correct": 0,
+        "points": 100
+      },
+      {
+        "id": "m_e_1453",
+        "question": "What is the name of the Egyptian god with the head of a jackal?",
+        "options": ["Horus", "Anubis", "Thoth", "Ra"],
+        "correct": 1,
+        "points": 100
+      },
+      {
+        "id": "m_e_3481",
+        "question": "Who wrote the Mahabharata?",
+        "options": ["Tulsidas", "Vyasa", "Vishwamitra", "Valmiki"],
+        "correct": 1,
+        "points": 100
+      },
+      {
+        "id": "m_e_9905",
+        "question": "Who is the king of the Greek gods?",
+        "options": ["Apollo", "Hercules", "Zeus", "Poseidon"],
+        "correct": 2,
+        "points": 100
+      },
+      {
+        "id": "m_e_172",
+        "question": "Which goddess is associated with wisdom and warfare?",
+        "options": ["Athena", "Arthemis", "Hera", "Aphrodite"],
+        "correct": 0,
+        "points": 100
+      },
+      {
+        "id": "m_e_2030",
+        "question": "Who is the god of the sea in Greek mythology?",
+        "options": ["Hermes", "Ares", "Poseidon", "Hades"],
+        "correct": 2,
+        "points": 100
+      },
+      {
+        "id": "m_e_3787",
+        "question": "Who is the Goddess of love in Greek mythology ?",
+        "options": ["Medea", "Pandora", "Aphrodite", "Athena"],
+        "correct": 2,
+        "points": 100
+      },
+      {
+        "id": "m_e_5496",
+        "question": "Which warrior had the weapon that never ran out of ammunition given by Varuna?",
+        "options": ["Karna", "Arjuna", "Duryodhana", "Bheema"],
+        "correct": 1,
+        "points": 100
+      }
+    ],
+    "moderate": [
+      {
+        "id": "m_m_5955",
+        "question": "In Norse mythology, who is the father of Fenrir, the giant wolf?",
+        "options": ["Týr", "Surtr", "Odin", "Loki"],
+        "correct": 3,
+        "points": 150
+      },
+      {
+        "id": "m_m_6933",
+        "question": "Who was condemned to hold up the sky for eternity in Greek mythology?",
+        "options": ["Atlas", "Kronos", "Prometheus", "Ouranos"],
+        "correct": 0,
+        "points": 150
+      },
+      {
+        "id": "m_m_9511",
+        "question": "In Greek mythology, which Titan was condemned to hold up the heavens as punishment for leading the Titans in their battle against the Olympian gods?",
+        "options": ["Cronus", "Prometheus", "Hyperion", "Atlas"],
+        "correct": 3,
+        "points": 150
+      },
+      {
+        "id": "m_m_6914",
+        "question": "Which Norse god is known for their mischievous and shape-shifting abilities?",
+        "options": ["Odin", "Thor", "Freyr", "Loki"],
+        "correct": 3,
+        "points": 150
+      },
+      {
+        "id": "m_m_6738",
+        "question": "What was the name of the creature with the head of a bull and the body of a man, that resided in the Labyrinth?",
+        "options": ["Minotaur", "Cyclops", "Cerberus", "Centaur"],
+        "correct": 0,
+        "points": 150
+      },
+      {
+        "id": "m_m_1228",
+        "question": "Which of the Norse realms is known as the home of the frost giants?",
+        "options": ["Jotunheim", "Vanaheim", "Midgard", "Asgard"],
+        "correct": 0,
+        "points": 150
+      },
+      {
+        "id": "m_m_6324",
+        "question": "In the Hindu epic Mahabharata, who was Arjuna's charioteer?",
+        "options": ["Karna", "Bhishma", "Dronacharya", "Krishna"],
+        "correct": 3,
+        "points": 150
+      },
+      {
+        "id": "m_m_1244",
+        "question": "What was the name of the ship that Jason and the Argonauts sailed on?",
+        "options": [
+          "The Odyssey",
+          "The Pegasus",
+          "The Argo",
+          "The Trojan Horse"
+        ],
+        "correct": 2,
+        "points": 150
+      },
+      {
+        "id": "m_m_6533",
+        "question": "Who is the Roman god of the sea?",
+        "options": ["Pluto", "Mars", "Jupiter", "Neptune"],
+        "correct": 3,
+        "points": 150
+      },
+      {
+        "id": "m_m_9574",
+        "question": "In Greek mythology, who were the nine muses?",
+        "options": [
+          "Gods of war",
+          "Carriers of zeus messages",
+          "Goddesses of the arts.",
+          "Rulers of the underworld."
+        ],
+        "correct": 2,
+        "points": 150
+      },
+      {
+        "id": "m_m_2323",
+        "question": "what is the name of the norse world tree?",
+        "options": ["Bifrost", "Fólkvangr", "Valhalla", "Yggdrasil"],
+        "correct": 3,
+        "points": 150
+      },
+      {
+        "id": "m_m_8935",
+        "question": "What is the name of the egyptian god of writing and knowledge?",
+        "options": ["Set", "Ptah", "Khnum", "Thoth"],
+        "correct": 3,
+        "points": 150
+      },
+      {
+        "id": "m_m_7492",
+        "question": "Which monster has snakes for hair and can turn onlookers into stone?",
+        "options": ["Medusa", "Hydra", "Chimera", "Cyclops"],
+        "correct": 0,
+        "points": 150
+      },
+      {
+        "id": "m_m_924",
+        "question": "What is the name of the three-headed dog that guards the Underworld?",
+        "options": ["Cerberus", "Chimera", "Hydra", "Orthrus"],
+        "correct": 0,
+        "points": 150
+      },
+      {
+        "id": "m_m_8562",
+        "question": "What was the name of the first woman created by the gods, who opened a jar unleashing evils upon the world?",
+        "options": ["Helen", "Pandora", "Medea", "Persephone"],
+        "correct": 1,
+        "points": 150
+      },
+      {
+        "id": "m_m_9630",
+        "question": "Who is the Greek Goddess of the hunt and the moon?",
+        "options": ["Aphrodite", "Arthemis", "Hera", "Persephone"],
+        "correct": 1,
+        "points": 150
+      }
+    ],
+    "hard": [
+      {
+        "id": "m_h_2512",
+        "question": "In Hindu mythology, which of these gods was born from a lotus that emerged from another deity's navel?",
+        "options": ["Shiva", "Indra", "Vishnu", "Brahma"],
+        "correct": 3,
+        "points": 200
+      },
+      {
+        "id": "m_h_6124",
+        "question": "Who stole fire from the gods and gave it to mankind?",
+        "options": ["Prometheus", "Dionysus", "Hermes", "Apollo"],
+        "correct": 0,
+        "points": 200
+      },
+      {
+        "id": "m_h_7517",
+        "question": "Which warrior possessed the celestial weapon Narayanastra?",
+        "options": ["Ashwatthama", "Bhishma", "Karna", "Arjuna"],
+        "correct": 0,
+        "points": 200
+      },
+      {
+        "id": "m_h_3231",
+        "question": "Who was the only son of Bhima and Hidimbi?",
+        "options": ["Iravan", "Ghatotkacha", "Babruvahana", "Abhimanyu"],
+        "correct": 1,
+        "points": 200
+      },
+      {
+        "id": "m_h_1224",
+        "question": "On which day of the Kurukshetra war was Abhimanyu killed?",
+        "options": ["12th", "13th", "16th", "17th"],
+        "correct": 1,
+        "points": 200
+      },
+      {
+        "id": "m_h_857",
+        "question": "Who is the son of Ghatotkacha",
+        "options": ["Barbarika", "Abhimanyu", "Babruvahana", "Shrutakarma"],
+        "correct": 0,
+        "points": 200
+      },
+      {
+        "id": "m_h_7782",
+        "question": "What is the name of Bhishma’s father?",
+        "options": ["Shantanu", "Vichitravirya", "Pratipa", "Parashurama"],
+        "correct": 0,
+        "points": 200
+      },
+      {
+        "id": "m_h_5155",
+        "question": "What is the name of Karna’s foster mother",
+        "options": ["Subhadra", "Kunti", "Gandhari", "Radha"],
+        "correct": 3,
+        "points": 200
+      }
+    ]
+  },
+  "Gaming and Esports": {
+    "easy": [
+      {
+        "id": "gae_e_9808",
+        "question": "Who is Mario’s brother in the Super Mario series?",
+        "options": ["Binod", "Yoshi", "Wario", "Luigi"],
+        "correct": 3,
+        "points": 100
+      },
+      {
+        "id": "gae_e_8601",
+        "question": "What is the best-selling video game of all time?(2024)",
+        "options": ["Minecraft", "Tetris", "Roblox", "Grand Theft Auto V"],
+        "correct": 0,
+        "points": 100
+      },
+      {
+        "id": "gae_e_2141",
+        "question": "Which company developed The Legend of Zelda series?",
+        "options": ["Capcom", "Sega", "Nintendo", "Sony"],
+        "correct": 2,
+        "points": 100
+      },
+      {
+        "id": "gae_e_9478",
+        "question": "Which company publishes the Call of Duty series?",
+        "options": ["Activision", "EA", "Nintendo", "Ubisoft"],
+        "correct": 0,
+        "points": 100
+      },
+      {
+        "id": "gae_e_5177",
+        "question": "What does the abbreviation \"EA\" in \"EA Sports\" stand for?",
+        "options": [
+          "Elite Activities",
+          "Electronic Arts",
+          "Extreme Athletics",
+          "Entertainment Association"
+        ],
+        "correct": 1,
+        "points": 100
+      },
+      {
+        "id": "gae_e_7279",
+        "question": "Which game features \"Ender Dragons\"?",
+        "options": ["Minecraft", "Terraria", "Dark Souls", "Skyrim"],
+        "correct": 0,
+        "points": 100
+      },
+      {
+        "id": "gae_e_3739",
+        "question": "What does \"NPC\" stand for?",
+        "options": [
+          "Non-Permanent Companion",
+          "Non-Playable Character",
+          "Non-Player Character",
+          "New Player Controller"
+        ],
+        "correct": 2,
+        "points": 100
+      },
+      {
+        "id": "gae_e_8650",
+        "question": "Halo was originally devleoped by bungie, who manages it now?",
+        "options": ["Bungie studios", "EA", "343 Industries", "Halo Studios"],
+        "correct": 3,
+        "points": 100
+      },
+      {
+        "id": "gae_e_9718",
+        "question": "What is the main currency in Fortnite?",
+        "options": ["V-Bucks", "Robux", "Fort coins", "Gems"],
+        "correct": 0,
+        "points": 100
+      }
+    ],
+    "moderate": [
+      {
+        "id": "gae_m_7353",
+        "question": "Which team won the first League of Legends World Championship in 2011?",
+        "options": ["Cloud9", "Fnatic", "SK Telecom T1", "TPA"],
+        "correct": 1,
+        "points": 150
+      },
+      {
+        "id": "gae_m_2210",
+        "question": "What is the highest rank in CS:GO?",
+        "options": [
+          "Global Elite",
+          "Legendary Eagle",
+          "Distinguished Conqueror",
+          "Supreme Master"
+        ],
+        "correct": 0,
+        "points": 150
+      },
+      {
+        "id": "gae_m_6229",
+        "question": "Which game introduced the \"Gulag\" respawn mechanic?",
+        "options": ["PUBG", "Fortnite", "Call of Duty: Warzone", "Apex Legend"],
+        "correct": 2,
+        "points": 150
+      },
+      {
+        "id": "gae_m_5710",
+        "question": "Who is the protagonist of The Witcher 3?",
+        "options": ["Yennefer", "Geralt of Rivia", "Ciri", "Triss Merigold"],
+        "correct": 1,
+        "points": 150
+      },
+      {
+        "id": "gae_m_214",
+        "question": "Which game uses the \"Animus\" device for genetic memory exploration?",
+        "options": [
+          "Assassin’s Creed",
+          "Watch Dogs",
+          "Cyberpunk 2077",
+          "Deus Ex"
+        ],
+        "correct": 0,
+        "points": 150
+      },
+      {
+        "id": "gae_m_4103",
+        "question": "What is the maximum player count in Valorant?",
+        "options": ["4v4", "5v5", "3v3", "6v6"],
+        "correct": 1,
+        "points": 150
+      },
+      {
+        "id": "gae_m_7385",
+        "question": "Which Overwatch hero is a support class?",
+        "options": ["Genji", "Reinhardt", "Mercy", "Reaper"],
+        "correct": 2,
+        "points": 150
+      },
+      {
+        "id": "gae_m_1164",
+        "question": "In Dota 2, what is the main objective?",
+        "options": [
+          "Destroy the enemy Nexus",
+          "Collect gold",
+          "Capture the flag",
+          "Defeat the Ancient"
+        ],
+        "correct": 3,
+        "points": 150
+      },
+      {
+        "id": "gae_m_9512",
+        "question": "Which game introduced a building mechanic where players construct structures in real-time?",
+        "options": ["Fortnite", "Call of Duty", "PUBG", "Apex Legends"],
+        "correct": 0,
+        "points": 150
+      },
+      {
+        "id": "gae_m_4818",
+        "question": "Which esports organization won the 2021 International (Dota 2)?",
+        "options": ["OG", "Team Spirit", "PSG.LGD", "Evil Geniuses"],
+        "correct": 1,
+        "points": 150
+      }
+    ],
+    "hard": [
+      {
+        "id": "gae_h_1961",
+        "question": "What year was Twitch.tv launched?",
+        "options": ["2011", "2009", "2013", "2010"],
+        "correct": 0,
+        "points": 200
+      },
+      {
+        "id": "gae_h_2156",
+        "question": "Who is the CEO of Epic Games?",
+        "options": [
+          "Tim Sweeney",
+          "Bobby Kotick",
+          "Gabe Newell",
+          "Mark Zuckerberg"
+        ],
+        "correct": 0,
+        "points": 200
+      },
+      {
+        "id": "gae_h_4745",
+        "question": "Which Valorant agent can heal others?",
+        "options": ["Tejo", "Sage", "Phoenix", "Reyna"],
+        "correct": 1,
+        "points": 200
+      },
+      {
+        "id": "gae_h_994",
+        "question": "What is the rarest CS:GO knife skin among the options?",
+        "options": [
+          "Karambit Crimson Web",
+          "Butterfly Knife Lore",
+          "M9 Bayonet",
+          "Gut Knife Ultraviolet"
+        ],
+        "correct": 0,
+        "points": 200
+      },
+      {
+        "id": "gae_h_9385",
+        "question": "Which League of Legends champion is known as \"The Darkin Blade\"?",
+        "options": ["Aatrox", "Rhaast", "Kayn", "Varus"],
+        "correct": 0,
+        "points": 200
+      },
+      {
+        "id": "gae_h_1854",
+        "question": "In World of Warcraft, which faction is based in Orgrimmar?",
+        "options": ["Horde", "Scourge", "Night Elves", "Alliance"],
+        "correct": 0,
+        "points": 200
+      },
+      {
+        "id": "gae_h_932",
+        "question": "Who won the 2019 Fortnite World Cup Championship?",
+        "options": ["Mongraal", "Bugha", "Aqua", "Kylex"],
+        "correct": 1,
+        "points": 200
+      },
+      {
+        "id": "gae_h_1618",
+        "question": "What is the real name of Overwatch’s character \"Soldier: 76\"?",
+        "options": [
+          "Gabriel Reyes",
+          "Vincent Volskaya",
+          "John Smith",
+          "Jack Morrison"
+        ],
+        "correct": 3,
+        "points": 200
+      }
+    ]
+  },
+  "Logical & Riddles": {
+    "easy": [
+      {
+        "id": "lr_e_5743",
+        "question": "I speak without a mouth and hear without ears. I have no body, but I come alive with the wind. What am I?",
+        "options": ["Thunder", "An Echo", "Cloud", "Wave"],
+        "correct": 1,
+        "points": 100
+      },
+      {
+        "id": "lr_e_4301",
+        "question": "Which word does NOT belong with the others?",
+        "options": ["yard", "ounce", "centimeter", "inch"],
+        "correct": 3,
+        "points": 100
+      },
+      {
+        "id": "lr_e_2299",
+        "question": "I have keys but open no locks. What am I?",
+        "options": [
+          "A doorknob",
+          "A treasure chest",
+          "A piano",
+          "A skeleton key"
+        ],
+        "correct": 2,
+        "points": 100
+      },
+      {
+        "id": "lr_e_7482",
+        "question": "The more you take, the more you leave behind. What am I?",
+        "options": ["Coins", "Footsteps", "A shadow", "Time"],
+        "correct": 1,
+        "points": 100
+      },
+      {
+        "id": "lr_e_680",
+        "question": "A boy and a doctor were fishing. The boy is the doctor's son, but the doctor isn't the boy's father. Who is the doctor?",
+        "options": ["Uncle", "Father", "Grandfather", "Mother"],
+        "correct": 3,
+        "points": 100
+      },
+      {
+        "id": "lr_e_6776",
+        "question": "What comes next in the sequence? 2, 6, 12, 20, 30, ?",
+        "options": ["40", "42", "38", "44"],
+        "correct": 1,
+        "points": 100
+      },
+      {
+        "id": "lr_e_1310",
+        "question": "Spot the odd one out - FIRST, SECOND, THIRD, FORTH, FIFTH, SIXTH, SEVENTH, EIGHTH",
+        "options": ["First", "Second", "Seventh", "Fourth"],
+        "correct": 3,
+        "points": 100
+      },
+      {
+        "id": "lr_e_4130",
+        "question": "What starts with a T, ends with a T and has T in it?",
+        "options": ["Tenet", "Gossip", "Teapot", "Tea"],
+        "correct": 2,
+        "points": 100
+      },
+      {
+        "id": "lr_e_4215",
+        "question": "What can go up and come down without moving?",
+        "options": ["Temperature", "Sun", "Waves", "Shadow"],
+        "correct": 0,
+        "points": 100
+      },
+      {
+        "id": "lr_e_9870",
+        "question": "Tool of thief, toy of queen. Always used to be unseen. Sign of joy, sign of sorrow. Giving all likeness borrowed. What am I?",
+        "options": ["Crown", "Throne", "Knife", "Mask"],
+        "correct": 3,
+        "points": 100
+      },
+      {
+        "id": "lr_e_8135",
+        "question": "Can a man legally marry his widow's sister in the state of California?",
+        "options": [
+          "No",
+          "No, not in California",
+          "NO since she is a 'widow', the guy's dead!",
+          "Yes"
+        ],
+        "correct": 2,
+        "points": 100
+      },
+      {
+        "id": "lr_e_2484",
+        "question": "Imagine you're in a room that is filling with water. There are no windows or doors. How do you get out?",
+        "options": [
+          "Die",
+          "Climb out through the roof",
+          "Stop imagining!",
+          "Water will break the walls of the room."
+        ],
+        "correct": 2,
+        "points": 100
+      },
+      {
+        "id": "lr_e_1243",
+        "question": "The more you take, the more you leave behind. What am I?",
+        "options": ["Footprints", "Sand", "Time", "Memories"],
+        "correct": 0,
+        "points": 100
+      },
+      {
+        "id": "lr_e_6834",
+        "question": "Everyone has me but nobody can lose me. What am I?",
+        "options": ["Emotions", "Water", "Hair", "Shadow"],
+        "correct": 3,
+        "points": 100
+      },
+      {
+        "id": "lr_e_6604",
+        "question": "Where can you find rivers with no water, cities with no buildings and forests with no trees?",
+        "options": ["Photos", "News", "In maps", "Dreams"],
+        "correct": 2,
+        "points": 100
+      },
+      {
+        "id": "lr_e_3821",
+        "question": "There was a plane crash every single person died. Who survived?",
+        "options": ["Pilot", "Children", "Married couples", "Crew"],
+        "correct": 2,
+        "points": 100
+      },
+      {
+        "id": "lr_e_3687",
+        "question": "A farmer has chickens and goats. There are 22 heads and 56 legs. What is the number of each animal that the farmer has?",
+        "options": [
+          "12 goats and 10 chickens",
+          "10 horses and 12 goats",
+          "12 horses and 10 hens",
+          "10 chickens and 12 goats."
+        ],
+        "correct": 3,
+        "points": 100
+      }
+    ],
+    "moderate": [],
+    "hard": [
+      {
+        "id": "lr_h_3019",
+        "question": "Two trains are moving towards each other at 50 km/h each. A bird starts flying at 100 km/h between them. If the trains start 100 km apart, how far will the bird fly before the trains collide?",
+        "options": ["50 km", "100 km", "25 km", "75 km"],
+        "correct": 1,
+        "points": 200
+      },
+      {
+        "id": "lr_h_114",
+        "question": "Rhythm of eyes' city name in India?",
+        "options": ["Karnataka", "Srinagar", "Chennai", "Nainital"],
+        "correct": 3,
+        "points": 200
+      },
+      {
+        "id": "lr_h_5955",
+        "question": "One rabbit saw 6 elephants while going towards River. Every elephant saw 2 monkeys are going towards river. Every monkey holds one tortoice in their hands. How many animals are going towards the river?",
+        "options": ["11", "3", "5", "12"],
+        "correct": 2,
+        "points": 200
+      },
+      {
+        "id": "lr_h_6671",
+        "question": "If a giraffe has two eyes, a monkey has two eyes, and an elephant has two eyes, how many eyes do we have?",
+        "options": ["3", "1", "2", "4"],
+        "correct": 3,
+        "points": 200
+      },
+      {
+        "id": "lr_h_679",
+        "question": "Three people are wearing hats, each red or blue. They can see others' hats but not their own. Each person raises their hand if they see at least one red hat. All three raise their hands. Then, one person correctly guesses their hat color.",
+        "options": [
+          "Red",
+          "Depends on the order they guessed",
+          "One of each",
+          "Blue"
+        ],
+        "correct": 0,
+        "points": 200
+      },
+      {
+        "id": "lr_h_1135",
+        "question": "You have a glass of water and put a cube of ice in it. As the ice melts, what happens to the water level?",
+        "options": [
+          "It rises slightly",
+          "It decreases slightly",
+          "It stays the same",
+          "It stays the same"
+        ],
+        "correct": 2,
+        "points": 200
+      },
+      {
+        "id": "lr_h_480",
+        "question": "A three-digit number reads the same forward and backward. It is divisible by 11 and not prime. What is it?",
+        "options": ["242", "121", "343", "454"],
+        "correct": 0,
+        "points": 200
+      },
+      {
+        "id": "lr_h_3135",
+        "question": "You meet two brothers: one always lies, the other always tells the truth. You can ask one question to figure out which one is which. What do you ask?",
+        "options": [
+          "\"Are you the liar?\"",
+          "\"Is 2 + 2 = 4?\"",
+          "\"Would your brother say you are honest?\"",
+          "\"Who is older?\""
+        ],
+        "correct": 2,
+        "points": 200
+      },
+      {
+        "id": "lr_h_2236",
+        "question": "A family has two children. You learn that at least one is a boy. What is the probability that both are boys?",
+        "options": [
+          "2025-04-03 00:00:00",
+          "2025-03-01 00:00:00",
+          "2025-03-02 00:00:00",
+          "2025-04-01 00:00:00"
+        ],
+        "correct": 1,
+        "points": 200
+      },
+      {
+        "id": "lr_h_4072",
+        "question": "What comes next in the sequence? 3, 6, 11, 18, 27, ?",
+        "options": ["39", "40", "37", "38"],
+        "correct": 3,
+        "points": 200
       }
     ]
   }
 }
-

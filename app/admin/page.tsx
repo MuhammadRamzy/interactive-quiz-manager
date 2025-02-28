@@ -186,15 +186,30 @@ export default function AdminPanel() {
     }, 3000);
   };
 
-  const startTimer = () => {
-    setGameState(prev => ({ ...prev, timerRunning: true }))
-    channel.postMessage({ type: "TIMER_START" })
-  }
+   const audioRef = useRef<HTMLAudioElement | null>(null);
 
-  const stopTimer = () => {
-    setGameState(prev => ({ ...prev, timerRunning: false }))
-    channel.postMessage({ type: "TIMER_STOP" })
-  }
+   const startTimer = () => {
+     setGameState((prev) => ({ ...prev, timerRunning: true }));
+     channel.postMessage({ type: "TIMER_START" });
+
+     if (!audioRef.current) {
+       audioRef.current = new Audio("/clock-ticking.mp3");
+       audioRef.current.loop = true;
+     }
+
+     audioRef.current.play();
+   };
+
+   const stopTimer = () => {
+     setGameState((prev) => ({ ...prev, timerRunning: false }));
+     channel.postMessage({ type: "TIMER_STOP" });
+
+     if (audioRef.current) {
+       audioRef.current.pause();
+       audioRef.current.currentTime = 0;
+     }
+   };
+
 
   const handleOptionSelect = (optionIndex: number) => {
     if (gameState.revealAnswer) return; // Don't allow selection after reveal
@@ -981,7 +996,7 @@ export default function AdminPanel() {
             <DollarSign className="w-5 h-5 text-green-600" />
             <h3 className="font-semibold text-gray-900">Available Questions</h3>
           </div>
-          <div className="grid grid-cols-1 gap-4 max-h-[calc(100vh-500px)] overflow-y-auto scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-transparent pr-2">
+          <div className="grid grid-cols-1 gap-4 max-h-[1000px] overflow-y-auto scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-transparent pr-2">
             {filteredQuestions.map((question, idx) => (
               <Card 
                 key={idx} 
@@ -1199,7 +1214,7 @@ export default function AdminPanel() {
 
   // Add this component for animation controls
   const renderAnimationControls = () => (
-    <Card className="p-6">
+    <Card className="p-6 grid-cols-3">
       <h2 className="text-xl font-semibold mb-4">Visual Effects</h2>
       <div className="space-y-4">
         {/* Quick Effects */}
