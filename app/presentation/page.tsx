@@ -18,6 +18,7 @@ import {
 } from "lucide-react"
 import type { GameState, Question } from "@/types/game"
 import confetti from 'canvas-confetti'
+import Image from "next/image"
 
 // Add this interface above the component
 interface Question {
@@ -353,11 +354,11 @@ export default function PresentationScreen() {
       <motion.div
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
-        className="relative z-[100]"
+        className="relative z-[200]"
       >
         {/* Timer Circle */}
         <div className={`
-          w-40 h-40 rounded-full flex items-center justify-center
+          w-40 h-40 rounded-full flex items-center justify-center z-50
           ${isTimeout ? 'bg-red-100 border-red-300' :
             isTimeWarning ? 'bg-yellow-100 border-yellow-300' : 'bg-blue-100 border-blue-300'
           } border-4 relative
@@ -1006,27 +1007,39 @@ export default function PresentationScreen() {
   }
 
   return (
-    <div className="h-screen overflow-hidden bg-gradient-to-br from-gray-50 to-gray-100">
+    <div className="h-screen overflow-hidden">
+      <Image
+        src="/background.jpeg"
+        alt="bg"
+        layout="fill"
+        objectFit="cover"
+        className="absolute top-0 left-0 -z-10"
+      />
       {/* Subtle Header */}
-      <div className="absolute top-0 left-0 right-0 h-16 bg-white/30 backdrop-blur-[2px] z-20">
+      <div className="absolute top-0 left-0 right-0 h-16 bg-white/30 backdrop-blur-[0px] z-10">
         <div className="max-w-[1920px] mx-auto px-8 h-full flex items-center justify-between">
           <div className="flex items-center gap-3">
+            <Image src="/thanima.png" alt="logo" className="-ml-4" width={100} height={100} />
+            <div className="h-10 bg-white/50 w-[1px] rounded-full" />
             <div className="w-10 h-10 bg-blue-600/10 rounded-full flex items-center justify-center">
-              <Brain className="w-6 h-6 text-blue-600" />
+              <Image src="/logo.png" alt="logo" width={100} height={100} />
             </div>
-            <h1 className="text-lg font-semibold text-gray-700">
+            <h1 className="text-lg font-semibold text-white">
               Sell Me The Answer
             </h1>
           </div>
-          
+
           {/* Current Topic & Round - Only show when active */}
           {gameState.currentTopic && (
             <div className="flex items-center gap-4 text-sm">
-              <Badge variant="outline" className="px-3 py-1">
+              <Badge variant="outline" className="px-3 py-1 bg-white">
                 Round {gameState.currentRound}/3
               </Badge>
               <span className="text-gray-600">
-                Topic: <span className="font-medium text-blue-600">{gameState.currentTopic}</span>
+                Topic:{" "}
+                <span className="font-medium text-lg text-blue-200">
+                  {gameState.currentTopic}
+                </span>
               </span>
             </div>
           )}
@@ -1038,44 +1051,52 @@ export default function PresentationScreen() {
         <div className="absolute top-20 right-6 flex gap-6 bg-white/50 backdrop-blur-[2px] rounded-full px-6 py-2">
           <div className="text-center">
             <div className="text-sm text-gray-500">Q</div>
-            <div className="font-bold text-blue-600">{gameState.stats.answeredQuestions}/15</div>
+            <div className="font-bold text-blue-600">
+              {gameState.stats.answeredQuestions}/15
+            </div>
           </div>
           <div className="text-center">
             <div className="text-sm text-gray-500">₹</div>
-            <div className="font-bold text-green-600">{gameState.stats.totalEarned.toLocaleString()}</div>
-          </div>
-        </div>
-      )}
-
-      {/* Player Info - Only show during active gameplay */}
-      {gameState.currentParticipant?.name && gameState.status !== "topic_selection" && (
-        <div className="absolute top-20 left-6 bg-white/50 backdrop-blur-[2px] rounded-full px-4 py-2">
-          <div className="flex items-center gap-2">
-            <Users className="w-4 h-4 text-blue-600" />
-            <div className="font-medium text-gray-700">
-              {gameState.currentParticipant.name}
+            <div className="font-bold text-green-600">
+              {gameState.stats.totalEarned.toLocaleString()}
             </div>
           </div>
         </div>
       )}
 
+      {/* Player Info - Only show during active gameplay */}
+      {gameState.currentParticipant?.name &&
+        gameState.status !== "topic_selection" && (
+          <div className="absolute top-20 left-6 bg-white/50 backdrop-blur-[2px] rounded-full px-4 py-2">
+            <div className="flex items-center gap-2">
+              <Users className="w-4 h-4 text-blue-600" />
+              <div className="font-medium text-gray-700">
+                {gameState.currentParticipant.name}
+              </div>
+            </div>
+          </div>
+        )}
+
       {/* Main Content Area */}
       <div className="h-full flex flex-col pt-16">
         {/* Dynamic Content */}
-        <div className="flex-1 flex items-center justify-center p-4 relative">
+        <div className="flex-1 flex items-center justify-center p-4 relative z-20">
           <AnimatePresence mode="wait">
             {gameState.status === "topic_selection" && renderTopicSelection()}
-            {gameState.status === "topic_confirmed" && renderTopicConfirmation()}
+            {gameState.status === "topic_confirmed" &&
+              renderTopicConfirmation()}
             {gameState.status === "trader_selection" && renderTraderSelection()}
             {gameState.status === "question_phase" && renderQuestion()}
             {gameState.status === "trading" && renderTradeNegotiation()}
-            {(gameState.status === "trade_accepted" || gameState.status === "trade_rejected") && renderDealResult()}
+            {(gameState.status === "trade_accepted" ||
+              gameState.status === "trade_rejected") &&
+              renderDealResult()}
             {gameState.status === "game_started" && renderGameStart()}
             {gameState.status === "checkpoint_reached" && renderCheckpoint()}
           </AnimatePresence>
         </div>
       </div>
     </div>
-  )
+  );
 }
 
