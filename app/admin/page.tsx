@@ -1,16 +1,47 @@
-"use client"
+"use client";
 
-import { useState, useEffect, useRef } from "react"
-import { Button } from "@/components/ui/button"
-import { Card } from "@/components/ui/card"
-import { Users, Award, Brain, Play, Pause, RotateCcw, DollarSign, X, Sparkles, Sun, Zap, Cloud } from "lucide-react"
-import { Badge } from "@/components/ui/badge"
-import { Progress } from "@/components/ui/progress"
-import { Input } from "@/components/ui/input"
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import questionData from "@/data/questions.json"
-import type { GameState, Question, QuestionBank, GameStats, Difficulty, GameStatus } from "@/types/game"
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog"
+import { useState, useEffect, useRef } from "react";
+import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
+import {
+  Users,
+  Award,
+  Brain,
+  Play,
+  Pause,
+  RotateCcw,
+  DollarSign,
+  X,
+  Sparkles,
+  Sun,
+  Zap,
+  Cloud,
+} from "lucide-react";
+import { Badge } from "@/components/ui/badge";
+import { Progress } from "@/components/ui/progress";
+import { Input } from "@/components/ui/input";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+import questionData from "@/data/questions.json";
+import type {
+  GameState,
+  Question,
+  QuestionBank,
+  GameStats,
+  Difficulty,
+  GameStatus,
+} from "@/types/game";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
 
 const initialGameState: GameState = {
   status: "waiting",
@@ -47,7 +78,7 @@ const initialGameState: GameState = {
   rounds: [
     { number: 1, topic: "", questions: [], completed: false },
     { number: 2, topic: "", questions: [], completed: false },
-    { number: 3, topic: "", questions: [], completed: false }
+    { number: 3, topic: "", questions: [], completed: false },
   ],
   gamePhase: "setup",
   currentParticipant: {
@@ -65,44 +96,46 @@ const initialGameState: GameState = {
     current: 0,
     amounts: [],
   },
-}
+};
 
 interface QuestionWithIndex extends Question {
   index: number;
 }
 
 interface RoundState {
-  number: number
-  topic: string
-  questions: Question[]
-  completed: boolean
+  number: number;
+  topic: string;
+  questions: Question[];
+  completed: boolean;
 }
 
 // Add new animation types
-type AnimationType = 'confetti' | 'spotlight' | 'fireworks' | 'rain' | 'pulse';
+type AnimationType = "confetti" | "spotlight" | "fireworks" | "rain" | "pulse";
 
 export default function AdminPanel() {
-  const [mounted, setMounted] = useState(false)
-  const [channel] = useState(() => new BroadcastChannel("game-channel"))
-  const [gameState, setGameState] = useState<GameState>(initialGameState)
-  const [customTradeAmount, setCustomTradeAmount] = useState("")
-  const [availableQuestions, setAvailableQuestions] = useState<QuestionWithIndex[]>([])
-  const [questionQueue, setQuestionQueue] = useState<Question[]>([])
+  const [mounted, setMounted] = useState(false);
+  const [channel] = useState(() => new BroadcastChannel("game-channel"));
+  const [gameState, setGameState] = useState<GameState>(initialGameState);
+  const [customTradeAmount, setCustomTradeAmount] = useState("");
+  const [availableQuestions, setAvailableQuestions] = useState<
+    QuestionWithIndex[]
+  >([]);
+  const [questionQueue, setQuestionQueue] = useState<Question[]>([]);
   const [rounds, setRounds] = useState<RoundState[]>([
     { number: 1, topic: "", questions: [], completed: false },
     { number: 2, topic: "", questions: [], completed: false },
-    { number: 3, topic: "", questions: [], completed: false }
-  ])
-  const [traderName, setTraderName] = useState("")
-  const [isTraderDialogOpen, setIsTraderDialogOpen] = useState(false)
-  const [pulseColor, setPulseColor] = useState("blue")
+    { number: 3, topic: "", questions: [], completed: false },
+  ]);
+  const [traderName, setTraderName] = useState("");
+  const [isTraderDialogOpen, setIsTraderDialogOpen] = useState(false);
+  const [pulseColor, setPulseColor] = useState("blue");
 
   // Add timer interval ref
-  const timerInterval = useRef<NodeJS.Timeout | null>(null)
+  const timerInterval = useRef<NodeJS.Timeout | null>(null);
 
   useEffect(() => {
-    setMounted(true)
-  }, [])
+    setMounted(true);
+  }, []);
 
   // Initialize BroadcastChannel in useEffect
   useEffect(() => {
@@ -111,37 +144,37 @@ export default function AdminPanel() {
     // Channel message handler
     const handleMessage = (event: MessageEvent) => {
       // ... existing message handling ...
-    }
+    };
 
-    channel.onmessage = handleMessage
+    channel.onmessage = handleMessage;
 
     return () => {
-      channel.close()
-    }
-  }, [mounted, channel])
+      channel.close();
+    };
+  }, [mounted, channel]);
 
   // Update the timer effect
   useEffect(() => {
     if (gameState.timerRunning && gameState.timer > 0) {
       timerInterval.current = setInterval(() => {
-        setGameState(prev => {
+        setGameState((prev) => {
           const newTimer = prev.timer - 1;
-          
+
           // Handle timeout
           if (newTimer === 0) {
             // Automatically handle as incorrect answer after timeout
             handleTimeout();
           }
-          
+
           // Broadcast timer update
           channel.postMessage({
             type: "TIMER_UPDATE",
-            timer: newTimer
+            timer: newTimer,
           });
 
           return {
             ...prev,
-            timer: newTimer
+            timer: newTimer,
           };
         });
       }, 1000);
@@ -162,100 +195,101 @@ export default function AdminPanel() {
     stopTimer();
 
     // Mark as incorrect
-    setGameState(prev => ({
+    setGameState((prev) => ({
       ...prev,
       revealAnswer: true,
-      isCorrect: false
+      isCorrect: false,
     }));
 
     // Broadcast timeout
     channel.postMessage({
       type: "TIMEOUT",
       correctIndex: gameState.currentQuestion.correct,
-      isCorrect: false
+      isCorrect: false,
     });
 
     // After 3 seconds, move back to question phase
     setTimeout(() => {
-      setGameState(prev => ({
+      setGameState((prev) => ({
         ...prev,
         revealAnswer: false,
         selectedOption: null,
-        timer: 30
+        timer: 30,
       }));
     }, 3000);
   };
 
-   const audioRef = useRef<HTMLAudioElement | null>(null);
+  const audioRef = useRef<HTMLAudioElement | null>(null);
 
-   const startTimer = () => {
-     setGameState((prev) => ({ ...prev, timerRunning: true }));
-     channel.postMessage({ type: "TIMER_START" });
+  const startTimer = () => {
+    setGameState((prev) => ({ ...prev, timerRunning: true }));
+    channel.postMessage({ type: "TIMER_START" });
 
-     if (!audioRef.current) {
-       audioRef.current = new Audio("/clock-ticking.mp3");
-       audioRef.current.loop = true;
-     }
+    if (!audioRef.current) {
+      audioRef.current = new Audio("/clock-ticking.mp3");
+      audioRef.current.loop = true;
+    }
 
-     audioRef.current.play();
-   };
+    audioRef.current.play();
+  };
 
-   const stopTimer = () => {
-     setGameState((prev) => ({ ...prev, timerRunning: false }));
-     channel.postMessage({ type: "TIMER_STOP" });
+  const stopTimer = () => {
+    setGameState((prev) => ({ ...prev, timerRunning: false }));
+    channel.postMessage({ type: "TIMER_STOP" });
 
-     if (audioRef.current) {
-       audioRef.current.pause();
-       audioRef.current.currentTime = 0;
-     }
-   };
-
+    if (audioRef.current) {
+      audioRef.current.pause();
+      audioRef.current.currentTime = 0;
+    }
+  };
 
   const handleOptionSelect = (optionIndex: number) => {
     if (gameState.revealAnswer) return; // Don't allow selection after reveal
 
-    setGameState(prev => ({ ...prev, selectedOption: optionIndex }));
+    setGameState((prev) => ({ ...prev, selectedOption: optionIndex }));
     channel.postMessage({
       type: "SELECT_OPTION",
       optionIndex,
       gameState: {
         ...gameState,
-        selectedOption: optionIndex
-      }
+        selectedOption: optionIndex,
+      },
     });
   };
 
   const revealAnswer = () => {
-    if (!gameState.currentQuestion) return
+    if (!gameState.currentQuestion) return;
 
-    const isCorrect = gameState.selectedOption === gameState.currentQuestion.correct
-    setGameState(prev => ({
+    const isCorrect =
+      gameState.selectedOption === gameState.currentQuestion.correct;
+    setGameState((prev) => ({
       ...prev,
       revealAnswer: true,
-      isCorrect
-    }))
+      isCorrect,
+    }));
 
     channel.postMessage({
       type: "REVEAL_ANSWER",
       correctIndex: gameState.currentQuestion.correct,
-      isCorrect
-    })
-  }
+      isCorrect,
+    });
+  };
 
   useEffect(() => {
     if (gameState.currentTopic && gameState.questionBank) {
-      const questions = gameState.questionBank[gameState.currentTopic][gameState.difficulty]
-      const questionsWithIndex = questions.map((q, index) => ({ ...q, index }))
-      setAvailableQuestions(questionsWithIndex)
+      const questions =
+        gameState.questionBank[gameState.currentTopic][gameState.difficulty];
+      const questionsWithIndex = questions.map((q, index) => ({ ...q, index }));
+      setAvailableQuestions(questionsWithIndex);
       setGameState((prev) => ({
         ...prev,
         currentQuestionSet: questions,
-      }))
+      }));
     }
-  }, [gameState.currentTopic, gameState.difficulty, gameState.questionBank])
+  }, [gameState.currentTopic, gameState.difficulty, gameState.questionBank]);
 
   const updateStatus = (status: string) => {
-    setGameState((prev) => ({ ...prev, status }))
+    setGameState((prev) => ({ ...prev, status }));
     channel.postMessage({
       type: "STATUS_UPDATE",
       status,
@@ -263,27 +297,33 @@ export default function AdminPanel() {
         ...gameState,
         status,
       },
-    })
-  }
+    });
+  };
 
   // Function to handle round topic selection
   const selectRoundTopic = (roundNumber: number, topic: string) => {
+
+    
+    if (roundNumber !== gameState.currentRound) return;
     if (!gameState.questionBank || !topic) return;
 
-    const questions = gameState.questionBank[topic][gameState.difficulty].slice(0, 5);
-    
-    setRounds(prev => prev.map(round => 
-      round.number === roundNumber 
-        ? { ...round, topic, questions }
-        : round
-    ));
+    const questions = gameState.questionBank[topic][gameState.difficulty].slice(
+      0,
+      5
+    );
+
+    setRounds((prev) =>
+      prev.map((round) =>
+        round.number === roundNumber ? { ...round, topic, questions } : round
+      )
+    );
 
     const newGameState = {
       ...gameState,
       currentRound: roundNumber,
       currentTopic: topic,
-      availableTopics: gameState.availableTopics.filter(t => t !== topic),
-      selectedTopics: [...gameState.selectedTopics, topic]
+      availableTopics: gameState.availableTopics.filter((t) => t !== topic),
+      selectedTopics: [...gameState.selectedTopics, topic],
     };
 
     setGameState(newGameState);
@@ -298,70 +338,76 @@ export default function AdminPanel() {
     // Broadcast topic selection to presentation
     channel.postMessage({
       type: "TOPIC_SELECTED",
-      gameState: newGameState
+      gameState: newGameState,
     });
-  }
+  };
 
   // Function to complete a round
   const completeRound = (roundNumber: number) => {
-    setRounds(prev => prev.map(round => 
-      round.number === roundNumber 
-        ? { ...round, completed: true }
-        : round
-    ));
+    setRounds((prev) =>
+      prev.map((round) =>
+        round.number === roundNumber ? { ...round, completed: true } : round
+      )
+    );
 
-    // Move to next round if available
-    const nextRound = rounds.find(r => r.number > roundNumber && !r.completed);
-    if (nextRound) {
-      setGameState(prev => ({
+    // Only progress round if under 3
+    if (roundNumber < 3) {
+      setGameState((prev) => ({
         ...prev,
-        currentRound: nextRound.number,
-        status: "question_selection"
+        currentRound: prev.currentRound + 1,
+        status: "topic_selection",
       }));
     } else {
-      // Game complete
-      setGameState(prev => ({
+      setGameState((prev) => ({
         ...prev,
-        status: "game_complete"
+        status: "game_complete",
       }));
     }
-  }
+  };
 
   // Function to handle question completion
   const handleQuestionComplete = (correct: boolean) => {
-    const points = gameState.currentQuestion?.points || 0;
+    // Calculate points based on current round
+    const roundPoints = [50, 100, 150]; // Points per round
+    const points = correct ? roundPoints[gameState.currentRound - 1] : 0;
+
     const newStats = {
       ...gameState.stats,
       answeredQuestions: gameState.stats.answeredQuestions + 1,
       correctAnswers: gameState.stats.correctAnswers + (correct ? 1 : 0),
-      totalEarned: gameState.stats.totalEarned + (correct ? points : 0),
+      totalEarned: gameState.stats.totalEarned + points,
     };
 
-    // Check for checkpoint
+    // Check for checkpoint every 5 questions
+    // After handling checkpoint, automatically progress rounds
     if (gameState.questionNumber % 5 === 0) {
-      newStats.checkpointMoney = newStats.totalEarned;
-      newStats.currentCheckpoint = Math.floor(gameState.questionNumber / 5);
-      
-      // Complete current round
       completeRound(gameState.currentRound);
+
+      // Automatically select next round's topic if not last round
+      if (gameState.currentRound < 3) {
+        setGameState((prev) => ({
+          ...prev,
+          status: "topic_selection",
+        }));
+      }
     }
 
-    setGameState(prev => ({
+    setGameState((prev) => ({
       ...prev,
       stats: newStats,
-      questionNumber: prev.questionNumber + 1
+      questionNumber: prev.questionNumber + 1, // Increment question number here
     }));
 
     channel.postMessage({
       type: "STATS_UPDATE",
-      stats: newStats
+      stats: newStats,
     });
-  }
+  };
 
   const pushQuestion = (question: Question) => {
     // Mark the question as used
-    const updatedQuestions = availableQuestions.map(q => 
-      q.index === (question as QuestionWithIndex).index 
+    const updatedQuestions = availableQuestions.map((q) =>
+      q.index === (question as QuestionWithIndex).index
         ? { ...q, used: true }
         : q
     );
@@ -377,47 +423,86 @@ export default function AdminPanel() {
     };
 
     setGameState(gameStateUpdate);
-    
+
     // Broadcast the question
     channel.postMessage({
       type: "PUSH_QUESTION",
       question,
-      gameState: gameStateUpdate
+      gameState: gameStateUpdate,
     });
-  }
+  };
+
+  const handleNextQuestion = () => {
+    // Prevent going beyond 15 questions
+    if (gameState.questionNumber >= 15) return;
+
+    // Update question number and game state
+    setGameState((prev) => {
+      const newQuestionNumber = prev.questionNumber + 1;
+
+      // Check if round needs to be completed
+      if (newQuestionNumber % 5 === 0) {
+        completeRound(prev.currentRound);
+      }
+
+      return {
+        ...prev,
+        questionNumber: newQuestionNumber,
+        currentQuestion: null,
+        selectedOption: null,
+        revealAnswer: false,
+        timer: 30,
+        timerRunning: false,
+      };
+    });
+
+    // Push next question from queue if available
+    if (questionQueue.length > 0) {
+      pushNextQuestion();
+    }
+
+    // Broadcast update
+    channel.postMessage({
+      type: "NEXT_QUESTION",
+      questionNumber: gameState.questionNumber + 1,
+    });
+  };
 
   const handleAnswer = (correct: boolean) => {
-    const earnedPoints = correct ? gameState.currentQuestion?.points || 0 : 0
+    const roundPoints = [50, 100, 150];
+    const earnedPoints = correct ? roundPoints[gameState.currentRound - 1] : 0;
+
     const newStats = {
       ...gameState.stats,
       answeredQuestions: gameState.stats.answeredQuestions + 1,
       correctAnswers: gameState.stats.correctAnswers + (correct ? 1 : 0),
       totalEarned: gameState.stats.totalEarned + earnedPoints,
-    }
-
+    };
     // Check for checkpoint (every 5 questions)
     if (gameState.questionNumber % 5 === 0) {
-      newStats.checkpointMoney = newStats.totalEarned
-      newStats.currentCheckpoint = Math.floor(gameState.questionNumber / 5)
+      newStats.checkpointMoney = newStats.totalEarned;
+      newStats.currentCheckpoint = Math.floor(gameState.questionNumber / 5);
     }
 
     setGameState((prev) => ({
       ...prev,
       stats: newStats,
-    }))
+    }));
 
     channel.postMessage({
       type: "STATS_UPDATE",
       stats: newStats,
-    })
-  }
+    });
+  };
 
   const handleTrade = (accepted: boolean) => {
     const tradeStats = {
       ...gameState.stats.trades,
       accepted: gameState.stats.trades.accepted + (accepted ? 1 : 0),
       rejected: gameState.stats.trades.rejected + (accepted ? 0 : 1),
-      totalAmount: gameState.stats.trades.totalAmount + (accepted ? gameState.tradeAmount : 0),
+      totalAmount:
+        gameState.stats.trades.totalAmount +
+        (accepted ? gameState.tradeAmount : 0),
     };
 
     setGameState((prev) => ({
@@ -425,7 +510,8 @@ export default function AdminPanel() {
       stats: {
         ...prev.stats,
         trades: tradeStats,
-        totalLost: prev.stats.totalLost + (accepted ? gameState.tradeAmount : 0),
+        totalLost:
+          prev.stats.totalLost + (accepted ? gameState.tradeAmount : 0),
       },
     }));
 
@@ -433,7 +519,7 @@ export default function AdminPanel() {
     channel.postMessage({
       type: accepted ? "TRADE_ACCEPTED" : "TRADE_REJECTED",
       tradeAmount: gameState.tradeAmount,
-      traderName: gameState.currentTrader.name
+      traderName: gameState.currentTrader.name,
     });
 
     updateStatus(accepted ? "trade_accepted" : "trade_rejected");
@@ -446,122 +532,125 @@ export default function AdminPanel() {
 
   // Function to add question to queue
   const addToQueue = (question: Question) => {
-    setQuestionQueue(prev => [...prev, question])
-  }
+    setQuestionQueue((prev) => [...prev, question]);
+  };
 
   // Function to remove question from queue
   const removeFromQueue = (index: number) => {
-    setQuestionQueue(prev => prev.filter((_, i) => i !== index))
-  }
+    setQuestionQueue((prev) => prev.filter((_, i) => i !== index));
+  };
 
   // Function to push next question
-  const pushNextQuestion = () => {
-    if (questionQueue.length > 0) {
-      const nextQuestion = questionQueue[0]
-      pushQuestion(nextQuestion)
-      removeFromQueue(0)
-      setGameState(prev => ({
-        ...prev,
-        questionNumber: prev.questionNumber + 1
-      }))
-    }
-  }
+ const pushNextQuestion = () => {
+   if (questionQueue.length > 0) {
+     const nextQuestion = questionQueue[0];
+     pushQuestion(nextQuestion);
+     removeFromQueue(0);
+
+     // Auto-start timer for non-first questions
+     if (gameState.questionNumber > 1) {
+       startTimer();
+     }
+   }
+ };
 
   // Add function to manually update stats
   const updateStats = (updates: Partial<GameStats>) => {
-    setGameState(prev => ({
+    setGameState((prev) => ({
       ...prev,
-      stats: { ...prev.stats, ...updates }
-    }))
+      stats: { ...prev.stats, ...updates },
+    }));
     channel.postMessage({
       type: "STATS_UPDATE",
-      stats: { ...gameState.stats, ...updates }
-    })
-  }
+      stats: { ...gameState.stats, ...updates },
+    });
+  };
 
   // Add these functions
-  const updateParticipant = (updates: Partial<typeof gameState.currentParticipant>) => {
-    setGameState(prev => ({
+  const updateParticipant = (
+    updates: Partial<typeof gameState.currentParticipant>
+  ) => {
+    setGameState((prev) => ({
       ...prev,
-      currentParticipant: { ...prev.currentParticipant, ...updates }
+      currentParticipant: { ...prev.currentParticipant, ...updates },
     }));
 
     channel.postMessage({
       type: "PARTICIPANT_UPDATE",
       gameState: {
         ...gameState,
-        currentParticipant: { ...gameState.currentParticipant, ...updates }
-      }
+        currentParticipant: { ...gameState.currentParticipant, ...updates },
+      },
     });
   };
 
   const updateTrader = (updates: { name: string }) => {
-    setGameState(prev => ({
+    setGameState((prev) => ({
       ...prev,
-      currentTrader: updates.name
+      currentTrader: updates.name,
     }));
 
     channel.postMessage({
       type: "TRADER_UPDATE",
       gameState: {
         ...gameState,
-        currentTrader: updates.name
-      }
+        currentTrader: updates.name,
+      },
     });
   };
 
   const proceedToPhase = (newStatus: string) => {
     if (newStatus === "trader_selection" && gameState.currentTopic) {
       // Show topic confirmation animation first
-      setGameState(prev => ({
+      setGameState((prev) => ({
         ...prev,
-        status: "topic_confirmed"
+        status: "topic_confirmed",
       }));
 
       channel.postMessage({
         type: "STATUS_UPDATE",
         gameState: {
           ...gameState,
-          status: "topic_confirmed"
-        }
+          status: "topic_confirmed",
+        },
       });
 
       // Then proceed to trader selection after animation
       setTimeout(() => {
-        setGameState(prev => ({
+        setGameState((prev) => ({
           ...prev,
-          status: "trader_selection"
+          status: "trader_selection",
         }));
 
         channel.postMessage({
           type: "STATUS_UPDATE",
           gameState: {
             ...gameState,
-            status: "trader_selection"
-          }
+            status: "trader_selection",
+          },
         });
       }, 2000);
     } else {
-      setGameState(prev => ({
+      setGameState((prev) => ({
         ...prev,
-        status: newStatus
+        status: newStatus,
       }));
 
       channel.postMessage({
         type: "STATUS_UPDATE",
         gameState: {
           ...gameState,
-          status: newStatus
-        }
+          status: newStatus,
+        },
       });
     }
   };
 
   const startRound = () => {
-    setGameState(prev => ({
+    setGameState((prev) => ({
       ...prev,
       gamePhase: "playing",
-      status: "question_phase"
+      status: "question_phase",
     }));
 
     channel.postMessage({
@@ -569,23 +658,43 @@ export default function AdminPanel() {
       gameState: {
         ...gameState,
         gamePhase: "playing",
-        status: "question_phase"
-      }
+        status: "question_phase",
+      },
     });
   };
 
+  useEffect(() => {
+    if (gameState.questionNumber > 15) {
+      setGameState((prev) => ({
+        ...prev,
+        status: "game_complete",
+      }));
+    }
+  }, [gameState.questionNumber]);
+
   // Add this function with the other state management functions
   const startGame = () => {
+    const currentRound = rounds.find(
+      (r) => r.number === gameState.currentRound
+    );
+    if (!currentRound) return;
+
+    // Load questions for current round's topic
+    const questions = currentRound.questions;
+    const questionsWithIndex = questions.map((q, index) => ({ ...q, index }));
+    setAvailableQuestions(questionsWithIndex);
+
     // Set game state to started
-    setGameState(prev => ({
+    setGameState((prev) => ({
       ...prev,
       status: "game_started",
-      gamePhase: "playing"
+      gamePhase: "playing",
     }));
 
     // Load initial questions based on current topic and difficulty
     if (gameState.currentTopic && gameState.questionBank) {
-      const questions = gameState.questionBank[gameState.currentTopic][gameState.difficulty];
+      const questions =
+        gameState.questionBank[gameState.currentTopic][gameState.difficulty];
       const questionsWithIndex = questions.map((q, index) => ({ ...q, index }));
       setAvailableQuestions(questionsWithIndex);
 
@@ -604,16 +713,20 @@ export default function AdminPanel() {
       gameState: {
         ...gameState,
         status: "game_started",
-        gamePhase: "playing"
-      }
+        gamePhase: "playing",
+      },
     });
   };
 
   // Update the participant selection section
   const renderParticipantSelection = () => (
-    <div className={`p-4 rounded-lg border-2 ${
-      gameState.status === "participant_selection" ? "border-blue-500" : "border-gray-200"
-    }`}>
+    <div
+      className={`p-4 rounded-lg border-2 ${
+        gameState.status === "participant_selection"
+          ? "border-blue-500"
+          : "border-gray-200"
+      }`}
+    >
       <h3 className="font-semibold mb-2">1. Select Participant</h3>
       <Input
         placeholder="Participant Name"
@@ -632,14 +745,20 @@ export default function AdminPanel() {
 
   // Add this function after renderParticipantSelection and before renderTraderSelection
   const renderTopicSelection = () => (
-    <div className={`p-4 rounded-lg border-2 ${
-      gameState.status === "topic_selection" ? "border-blue-500" : "border-gray-200"
-    }`}>
+    <div
+      className={`p-4 rounded-lg border-2 ${
+        gameState.status === "topic_selection"
+          ? "border-blue-500"
+          : "border-gray-200"
+      }`}
+    >
       <h3 className="font-semibold mb-2">2. Select Topic</h3>
       <div className="space-y-3">
         <Select
           value={gameState.currentTopic}
-          onValueChange={(topic) => selectRoundTopic(gameState.currentRound, topic)}
+          onValueChange={(topic) =>
+            selectRoundTopic(gameState.currentRound, topic)
+          }
           disabled={gameState.status !== "topic_selection"}
         >
           <SelectTrigger className="w-full">
@@ -658,7 +777,9 @@ export default function AdminPanel() {
           <div className="bg-gray-50 p-3 rounded-lg">
             <div className="text-sm text-gray-500 mb-1">Selected Topic</div>
             <div className="font-medium">{gameState.currentTopic}</div>
-            <div className="text-sm text-gray-500 mt-2">Round {gameState.currentRound}</div>
+            <div className="text-sm text-gray-500 mt-2">
+              Round {gameState.currentRound}
+            </div>
           </div>
         )}
 
@@ -675,9 +796,13 @@ export default function AdminPanel() {
 
   // Update the trader selection section
   const renderTraderSelection = () => (
-    <div className={`p-4 rounded-lg border-2 ${
-      gameState.status === "trader_selection" ? "border-blue-500" : "border-gray-200"
-    }`}>
+    <div
+      className={`p-4 rounded-lg border-2 ${
+        gameState.status === "trader_selection"
+          ? "border-blue-500"
+          : "border-gray-200"
+      }`}
+    >
       <h3 className="font-semibold mb-2">3. Start Game</h3>
       <Button
         onClick={startGame}
@@ -701,27 +826,33 @@ export default function AdminPanel() {
       </div>
       {gameState.currentQuestion ? (
         <div className="space-y-4">
-          <p className="text-lg font-medium">{gameState.currentQuestion.question}</p>
+          <p className="text-lg font-medium">
+            {gameState.currentQuestion.question}
+          </p>
           <div className="grid grid-cols-2 gap-3">
             {gameState.currentQuestion.options.map((option, idx) => (
               <Button
                 key={idx}
                 onClick={() => handleOptionSelect(idx)}
-                variant={gameState.selectedOption === idx ? "default" : "outline"}
+                variant={
+                  gameState.selectedOption === idx ? "default" : "outline"
+                }
                 className={`p-4 h-auto text-left justify-start ${
                   gameState.revealAnswer
                     ? idx === gameState.currentQuestion?.correct
-                      ? 'bg-green-100 text-green-700 hover:bg-green-100'
+                      ? "bg-green-100 text-green-700 hover:bg-green-100"
                       : gameState.selectedOption === idx
-                      ? 'bg-red-100 text-red-700 hover:bg-red-100'
-                      : 'bg-gray-100'
+                      ? "bg-red-100 text-red-700 hover:bg-red-100"
+                      : "bg-gray-100"
                     : gameState.selectedOption === idx
-                    ? 'bg-blue-100 text-blue-700'
-                    : ''
+                    ? "bg-blue-100 text-blue-700"
+                    : ""
                 }`}
               >
                 <div>
-                  <span className="font-bold mr-2">{String.fromCharCode(65 + idx)}.</span>
+                  <span className="font-bold mr-2">
+                    {String.fromCharCode(65 + idx)}.
+                  </span>
                   {option}
                 </div>
               </Button>
@@ -735,6 +866,14 @@ export default function AdminPanel() {
               disabled={gameState.selectedOption === null}
             >
               Reveal Answer
+            </Button>
+            <Button
+              onClick={handleNextQuestion}
+              variant="outline"
+              className="bg-purple-100 text-purple-700 border-purple-300"
+              disabled={gameState.questionNumber >= 15}
+            >
+              Next Question
             </Button>
             <Button
               onClick={() => updateStatus("trading")}
@@ -778,32 +917,11 @@ export default function AdminPanel() {
     <Card className="p-6">
       <h2 className="text-xl font-semibold mb-4">Trade Controls</h2>
       <div className="space-y-4">
-        {/* Quick Amount Selection */}
-        <div>
-          <label className="text-sm font-medium text-gray-700 mb-2 block">Quick Amounts</label>
-          <div className="grid grid-cols-2 gap-2">
-            {[5000, 10000, 15000, 20000].map((amount) => (
-              <Button
-                key={amount}
-                onClick={() => {
-                  setGameState(prev => ({ ...prev, tradeAmount: amount }));
-                  channel.postMessage({
-                    type: "TRADE_UPDATE",
-                    amount
-                  });
-                }}
-                variant="outline"
-                size="sm"
-              >
-                ₹{amount.toLocaleString()}
-              </Button>
-            ))}
-          </div>
-        </div>
-
         {/* Custom Amount */}
         <div>
-          <label className="text-sm font-medium text-gray-700 mb-2 block">Custom Amount</label>
+          <label className="text-sm font-medium text-gray-700 mb-2 block">
+            Custom Amount
+          </label>
           <div className="flex gap-2">
             <Input
               type="number"
@@ -815,10 +933,10 @@ export default function AdminPanel() {
               onClick={() => {
                 const amount = parseInt(customTradeAmount);
                 if (!isNaN(amount)) {
-                  setGameState(prev => ({ ...prev, tradeAmount: amount }));
+                  setGameState((prev) => ({ ...prev, tradeAmount: amount }));
                   channel.postMessage({
                     type: "TRADE_UPDATE",
-                    amount
+                    amount,
                   });
                 }
               }}
@@ -887,7 +1005,7 @@ export default function AdminPanel() {
 
   // Update the question management layout
   const renderQuestionManagement = () => {
-    const filteredQuestions = availableQuestions.filter(q => !q.used);
+    const filteredQuestions = availableQuestions.filter((q) => !q.used);
 
     return (
       <div className="space-y-6">
@@ -898,10 +1016,13 @@ export default function AdminPanel() {
             <Select
               value={gameState.difficulty}
               onValueChange={(diff: Difficulty) => {
-                setGameState(prev => ({ ...prev, difficulty: diff }));
+                setGameState((prev) => ({ ...prev, difficulty: diff }));
                 if (gameState.currentTopic) {
-                  const questions = gameState.questionBank[gameState.currentTopic][diff];
-                  setAvailableQuestions(questions.map((q, index) => ({ ...q, index })));
+                  const questions =
+                    gameState.questionBank[gameState.currentTopic][diff];
+                  setAvailableQuestions(
+                    questions.map((q, index) => ({ ...q, index }))
+                  );
                 }
               }}
             >
@@ -926,15 +1047,20 @@ export default function AdminPanel() {
             <div className="flex justify-between items-center mb-3">
               <div className="flex items-center gap-2">
                 <Brain className="w-5 h-5 text-purple-600" />
-                <h3 className="font-semibold text-purple-900">Question Queue</h3>
+                <h3 className="font-semibold text-purple-900">
+                  Question Queue
+                </h3>
               </div>
-              <Badge variant="outline" className="bg-purple-100 text-purple-700">
+              <Badge
+                variant="outline"
+                className="bg-purple-100 text-purple-700"
+              >
                 {questionQueue.length} in Queue
               </Badge>
             </div>
             <div className="space-y-2 max-h-[200px] overflow-y-auto scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-transparent pr-2">
               {questionQueue.map((question, idx) => (
-                <div 
+                <div
                   key={idx}
                   className="bg-white p-3 rounded-lg shadow-sm hover:shadow-md transition-shadow"
                 >
@@ -949,9 +1075,14 @@ export default function AdminPanel() {
                       <div className="flex items-center justify-between">
                         <div className="flex gap-2 text-xs text-gray-500">
                           {question.options.map((opt, i) => (
-                            <span key={i} className={`px-1.5 py-0.5 rounded ${
-                              i === question.correct ? 'bg-green-100 text-green-700' : 'bg-gray-100'
-                            }`}>
+                            <span
+                              key={i}
+                              className={`px-1.5 py-0.5 rounded ${
+                                i === question.correct
+                                  ? "bg-green-100 text-green-700"
+                                  : "bg-gray-100"
+                              }`}
+                            >
                               {String.fromCharCode(65 + i)}
                             </span>
                           ))}
@@ -998,8 +1129,8 @@ export default function AdminPanel() {
           </div>
           <div className="grid grid-cols-1 gap-4 max-h-[1000px] overflow-y-auto scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-transparent pr-2">
             {filteredQuestions.map((question, idx) => (
-              <Card 
-                key={idx} 
+              <Card
+                key={idx}
                 className="hover:shadow-md transition-shadow border-l-4 border-l-blue-500"
               >
                 <div className="p-4">
@@ -1037,11 +1168,13 @@ export default function AdminPanel() {
                         key={optIdx}
                         className={`p-3 rounded-lg text-sm ${
                           optIdx === question.correct
-                            ? 'bg-green-50 text-green-700 font-medium border border-green-200'
-                            : 'bg-gray-50 border border-gray-100'
+                            ? "bg-green-50 text-green-700 font-medium border border-green-200"
+                            : "bg-gray-50 border border-gray-100"
                         }`}
                       >
-                        <span className="font-bold mr-2">{String.fromCharCode(65 + optIdx)}.</span>
+                        <span className="font-bold mr-2">
+                          {String.fromCharCode(65 + optIdx)}.
+                        </span>
                         <span className="line-clamp-1">{option}</span>
                       </div>
                     ))}
@@ -1146,7 +1279,7 @@ export default function AdminPanel() {
                 const value = parseInt(e.target.value);
                 if (!isNaN(value)) {
                   updateStats({
-                    trades: { ...gameState.stats.trades, accepted: value }
+                    trades: { ...gameState.stats.trades, accepted: value },
                   });
                 }
               }}
@@ -1163,7 +1296,7 @@ export default function AdminPanel() {
                 const value = parseInt(e.target.value);
                 if (!isNaN(value)) {
                   updateStats({
-                    trades: { ...gameState.stats.trades, rejected: value }
+                    trades: { ...gameState.stats.trades, rejected: value },
                   });
                 }
               }}
@@ -1180,7 +1313,7 @@ export default function AdminPanel() {
                 const value = parseInt(e.target.value);
                 if (!isNaN(value)) {
                   updateStats({
-                    trades: { ...gameState.stats.trades, totalAmount: value }
+                    trades: { ...gameState.stats.trades, totalAmount: value },
                   });
                 }
               }}
@@ -1199,8 +1332,8 @@ export default function AdminPanel() {
               trades: {
                 accepted: 0,
                 rejected: 0,
-                totalAmount: 0
-              }
+                totalAmount: 0,
+              },
             });
           }}
           variant="outline"
@@ -1224,28 +1357,28 @@ export default function AdminPanel() {
           </label>
           <div className="grid grid-cols-2 gap-2">
             <Button
-              onClick={() => triggerAnimation('confetti')}
+              onClick={() => triggerAnimation("confetti")}
               className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600"
             >
               <Sparkles className="w-4 h-4 mr-2" />
               Confetti
             </Button>
             <Button
-              onClick={() => triggerAnimation('spotlight')}
+              onClick={() => triggerAnimation("spotlight")}
               className="bg-gradient-to-r from-yellow-500 to-orange-500 hover:from-yellow-600 hover:to-orange-600"
             >
               <Sun className="w-4 h-4 mr-2" />
               Spotlight
             </Button>
             <Button
-              onClick={() => triggerAnimation('fireworks')}
+              onClick={() => triggerAnimation("fireworks")}
               className="bg-gradient-to-r from-red-500 to-pink-500 hover:from-red-600 hover:to-pink-600"
             >
               <Zap className="w-4 h-4 mr-2" />
               Fireworks
             </Button>
             <Button
-              onClick={() => triggerAnimation('rain')}
+              onClick={() => triggerAnimation("rain")}
               className="bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600"
             >
               <Cloud className="w-4 h-4 mr-2" />
@@ -1261,19 +1394,19 @@ export default function AdminPanel() {
           </label>
           <div className="grid grid-cols-3 gap-2">
             <Button
-              onClick={() => triggerLighting('success')}
+              onClick={() => triggerLighting("success")}
               className="bg-green-600 hover:bg-green-700"
             >
               Success
             </Button>
             <Button
-              onClick={() => triggerLighting('warning')}
+              onClick={() => triggerLighting("warning")}
               className="bg-yellow-600 hover:bg-yellow-700"
             >
               Warning
             </Button>
             <Button
-              onClick={() => triggerLighting('error')}
+              onClick={() => triggerLighting("error")}
               className="bg-red-600 hover:bg-red-700"
             >
               Error
@@ -1287,10 +1420,7 @@ export default function AdminPanel() {
             Pulse Effect
           </label>
           <div className="flex gap-2">
-            <Select
-              value={pulseColor}
-              onValueChange={setPulseColor}
-            >
+            <Select value={pulseColor} onValueChange={setPulseColor}>
               <SelectTrigger>
                 <SelectValue placeholder="Select color" />
               </SelectTrigger>
@@ -1303,7 +1433,7 @@ export default function AdminPanel() {
               </SelectContent>
             </Select>
             <Button
-              onClick={() => triggerAnimation('pulse')}
+              onClick={() => triggerAnimation("pulse")}
               className="flex-1"
             >
               Pulse
@@ -1317,17 +1447,23 @@ export default function AdminPanel() {
   // Helper functions
   const getDifficultyColor = (diff: string) => {
     switch (diff) {
-      case "easy": return "bg-green-600 hover:bg-green-700";
-      case "hard": return "bg-red-600 hover:bg-red-700";
-      default: return "bg-blue-600 hover:bg-blue-700";
+      case "easy":
+        return "bg-green-600 hover:bg-green-700";
+      case "hard":
+        return "bg-red-600 hover:bg-red-700";
+      default:
+        return "bg-blue-600 hover:bg-blue-700";
     }
   };
 
   const getDifficultyDescription = (diff: string) => {
     switch (diff) {
-      case "easy": return "Lower points, easier questions";
-      case "hard": return "Higher points, tougher questions";
-      default: return "Balanced difficulty and points";
+      case "easy":
+        return "Lower points, easier questions";
+      case "hard":
+        return "Higher points, tougher questions";
+      default:
+        return "Balanced difficulty and points";
     }
   };
 
@@ -1348,20 +1484,20 @@ export default function AdminPanel() {
     channel.postMessage({
       type: "TRIGGER_ANIMATION",
       animationType: type,
-      color: pulseColor
+      color: pulseColor,
     });
   };
 
-  const triggerLighting = (type: 'success' | 'warning' | 'error') => {
+  const triggerLighting = (type: "success" | "warning" | "error") => {
     channel.postMessage({
       type: "TRIGGER_LIGHTING",
-      lightingType: type
+      lightingType: type,
     });
   };
 
   // Update the main return to include the new component
   if (!mounted) {
-    return null // or a loading spinner
+    return null; // or a loading spinner
   }
 
   return (
@@ -1371,7 +1507,9 @@ export default function AdminPanel() {
         <div className="max-w-[1920px] mx-auto px-6 py-4">
           <div className="flex justify-between items-center">
             <div className="flex items-center gap-4">
-              <h1 className="text-2xl font-bold text-gray-800">Game Control Panel</h1>
+              <h1 className="text-2xl font-bold text-gray-800">
+                Game Control Panel
+              </h1>
               <Badge variant="outline" className="text-lg px-4 py-2">
                 Round {gameState.currentRound}/3
               </Badge>
@@ -1382,7 +1520,9 @@ export default function AdminPanel() {
             <div className="flex items-center gap-4">
               <div className="text-right">
                 <div className="text-sm text-gray-500">Current Player</div>
-                <div className="font-semibold">{gameState.currentParticipant.name}</div>
+                <div className="font-semibold">
+                  {gameState.currentParticipant.name}
+                </div>
               </div>
               <Badge variant="outline" className="text-lg px-4 py-2 capitalize">
                 {gameState.difficulty} Level
@@ -1403,26 +1543,56 @@ export default function AdminPanel() {
               <div className="space-y-3">
                 {/* Game Phase Steps */}
                 <div className="flex items-center gap-3">
-                  <div className={`w-3 h-3 rounded-full ${
-                    gameState.status === "participant_selection" ? "bg-blue-500" : "bg-gray-300"
-                  }`} />
-                  <span className={gameState.status === "participant_selection" ? "font-medium" : ""}>
+                  <div
+                    className={`w-3 h-3 rounded-full ${
+                      gameState.status === "participant_selection"
+                        ? "bg-blue-500"
+                        : "bg-gray-300"
+                    }`}
+                  />
+                  <span
+                    className={
+                      gameState.status === "participant_selection"
+                        ? "font-medium"
+                        : ""
+                    }
+                  >
                     Participant Selection
                   </span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <div className={`w-3 h-3 rounded-full ${
-                    gameState.status === "topic_selection" ? "bg-blue-500" : "bg-gray-300"
-                  }`} />
-                  <span className={gameState.status === "topic_selection" ? "font-medium" : ""}>
+                  <div
+                    className={`w-3 h-3 rounded-full ${
+                      gameState.status === "topic_selection"
+                        ? "bg-blue-500"
+                        : "bg-gray-300"
+                    }`}
+                  />
+                  <span
+                    className={
+                      gameState.status === "topic_selection"
+                        ? "font-medium"
+                        : ""
+                    }
+                  >
                     Topic Selection
                   </span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <div className={`w-3 h-3 rounded-full ${
-                    gameState.status === "trader_selection" ? "bg-blue-500" : "bg-gray-300"
-                  }`} />
-                  <span className={gameState.status === "trader_selection" ? "font-medium" : ""}>
+                  <div
+                    className={`w-3 h-3 rounded-full ${
+                      gameState.status === "trader_selection"
+                        ? "bg-blue-500"
+                        : "bg-gray-300"
+                    }`}
+                  />
+                  <span
+                    className={
+                      gameState.status === "trader_selection"
+                        ? "font-medium"
+                        : ""
+                    }
+                  >
                     Trader Selection
                   </span>
                 </div>
@@ -1433,9 +1603,14 @@ export default function AdminPanel() {
             <Card className="p-4">
               <div className="flex justify-between items-center mb-3">
                 <h2 className="text-lg font-semibold">Timer Control</h2>
-                <span className="text-3xl font-mono font-bold">{gameState.timer}s</span>
+                <span className="text-3xl font-mono font-bold">
+                  {gameState.timer}s
+                </span>
               </div>
-              <Progress value={(gameState.timer / 30) * 100} className="h-2 mb-3" />
+              <Progress
+                value={(gameState.timer / 30) * 100}
+                className="h-2 mb-3"
+              />
               <div className="grid grid-cols-3 gap-2">
                 <Button
                   onClick={startTimer}
@@ -1453,7 +1628,7 @@ export default function AdminPanel() {
                 </Button>
                 <Button
                   onClick={() => {
-                    setGameState(prev => ({ ...prev, timer: 30 }));
+                    setGameState((prev) => ({ ...prev, timer: 30 }));
                     channel.postMessage({ type: "TIMER_UPDATE", timer: 30 });
                   }}
                   className="bg-yellow-600"
@@ -1474,28 +1649,28 @@ export default function AdminPanel() {
                   </label>
                   <div className="grid grid-cols-2 gap-2">
                     <Button
-                      onClick={() => triggerAnimation('confetti')}
+                      onClick={() => triggerAnimation("confetti")}
                       className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600"
                     >
                       <Sparkles className="w-4 h-4 mr-2" />
                       Confetti
                     </Button>
                     <Button
-                      onClick={() => triggerAnimation('spotlight')}
+                      onClick={() => triggerAnimation("spotlight")}
                       className="bg-gradient-to-r from-yellow-500 to-orange-500 hover:from-yellow-600 hover:to-orange-600"
                     >
                       <Sun className="w-4 h-4 mr-2" />
                       Spotlight
                     </Button>
                     <Button
-                      onClick={() => triggerAnimation('fireworks')}
+                      onClick={() => triggerAnimation("fireworks")}
                       className="bg-gradient-to-r from-red-500 to-pink-500 hover:from-red-600 hover:to-pink-600"
                     >
                       <Zap className="w-4 h-4 mr-2" />
                       Fireworks
                     </Button>
                     <Button
-                      onClick={() => triggerAnimation('rain')}
+                      onClick={() => triggerAnimation("rain")}
                       className="bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600"
                     >
                       <Cloud className="w-4 h-4 mr-2" />
@@ -1511,19 +1686,19 @@ export default function AdminPanel() {
                   </label>
                   <div className="grid grid-cols-3 gap-2">
                     <Button
-                      onClick={() => triggerLighting('success')}
+                      onClick={() => triggerLighting("success")}
                       className="bg-green-600 hover:bg-green-700"
                     >
                       Success
                     </Button>
                     <Button
-                      onClick={() => triggerLighting('warning')}
+                      onClick={() => triggerLighting("warning")}
                       className="bg-yellow-600 hover:bg-yellow-700"
                     >
                       Warning
                     </Button>
                     <Button
-                      onClick={() => triggerLighting('error')}
+                      onClick={() => triggerLighting("error")}
                       className="bg-red-600 hover:bg-red-700"
                     >
                       Error
@@ -1537,10 +1712,7 @@ export default function AdminPanel() {
                     Pulse Effect
                   </label>
                   <div className="flex gap-2">
-                    <Select
-                      value={pulseColor}
-                      onValueChange={setPulseColor}
-                    >
+                    <Select value={pulseColor} onValueChange={setPulseColor}>
                       <SelectTrigger>
                         <SelectValue placeholder="Select color" />
                       </SelectTrigger>
@@ -1553,7 +1725,7 @@ export default function AdminPanel() {
                       </SelectContent>
                     </Select>
                     <Button
-                      onClick={() => triggerAnimation('pulse')}
+                      onClick={() => triggerAnimation("pulse")}
                       className="flex-1"
                     >
                       Pulse
@@ -1569,19 +1741,27 @@ export default function AdminPanel() {
               <div className="grid grid-cols-2 gap-4">
                 <div className="bg-gray-50 p-3 rounded-lg">
                   <div className="text-sm text-gray-500">Questions</div>
-                  <div className="text-xl font-bold">{gameState.stats.answeredQuestions}/15</div>
+                  <div className="text-xl font-bold">
+                    {gameState.stats.answeredQuestions}/15
+                  </div>
                 </div>
                 <div className="bg-gray-50 p-3 rounded-lg">
                   <div className="text-sm text-gray-500">Correct</div>
-                  <div className="text-xl font-bold text-green-600">{gameState.stats.correctAnswers}</div>
+                  <div className="text-xl font-bold text-green-600">
+                    {gameState.stats.correctAnswers}
+                  </div>
                 </div>
                 <div className="bg-gray-50 p-3 rounded-lg">
                   <div className="text-sm text-gray-500">Earned</div>
-                  <div className="text-xl font-bold text-blue-600">₹{gameState.stats.totalEarned.toLocaleString()}</div>
+                  <div className="text-xl font-bold text-blue-600">
+                    ₹{gameState.stats.totalEarned.toLocaleString()}
+                  </div>
                 </div>
                 <div className="bg-gray-50 p-3 rounded-lg">
                   <div className="text-sm text-gray-500">Checkpoint</div>
-                  <div className="text-xl font-bold text-purple-600">₹{gameState.stats.checkpointMoney.toLocaleString()}</div>
+                  <div className="text-xl font-bold text-purple-600">
+                    ₹{gameState.stats.checkpointMoney.toLocaleString()}
+                  </div>
                 </div>
               </div>
             </Card>
@@ -1612,6 +1792,5 @@ export default function AdminPanel() {
         </div>
       </div>
     </div>
-  )
+  );
 }
-
