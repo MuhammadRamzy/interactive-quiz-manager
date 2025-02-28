@@ -601,7 +601,7 @@ export default function PresentationScreen() {
           animate={{ scale: 1 }}
           className="text-center mb-12"
         >
-          <h2 className="text-5xl font-bold text-gray-800 mb-4">
+          <h2 className="text-5xl font-bold text-white mb-4">
             Round {gameState.currentRound}
           </h2>
           <Badge className="text-2xl px-6 py-3 bg-blue-100 text-blue-700">
@@ -619,13 +619,13 @@ export default function PresentationScreen() {
                 opacity: 1,
               }}
               transition={{ type: "spring", stiffness: 400, damping: 25 }}
-              className={`p-8 rounded-2xl text-center transform transition-all duration-300 ${
+              className={`p-8 rounded-2xl text-center flex justify-center items-center transform transition-all duration-300 ${
                 gameState.currentTopic === topic
                   ? "bg-blue-100 border-4 border-blue-500"
                   : "bg-white border-2 border-gray-200"
               }`}
             >
-              <motion.div
+              {/* <motion.div
                 animate={{
                   rotate:
                     gameState.currentTopic === topic ? [0, -10, 10, 0] : 0,
@@ -640,7 +640,7 @@ export default function PresentationScreen() {
                       : "text-gray-600"
                   }`}
                 />
-              </motion.div>
+              </motion.div> */}
               <h3 className="text-xl font-bold text-gray-800 mb-4">{topic}</h3>
               {gameState.currentTopic === topic && (
                 <motion.div
@@ -669,14 +669,14 @@ export default function PresentationScreen() {
         className="fixed inset-0 flex items-center justify-center bg-black/80 backdrop-blur-sm"
       >
         <div className="text-center">
-          <motion.div
+          {/* <motion.div
             initial={{ scale: 0, rotate: -180 }}
             animate={{ scale: 1, rotate: 0 }}
             transition={{ type: "spring", damping: 15 }}
             className="bg-blue-100 p-16 rounded-full mb-8"
           >
             <Brain className="w-32 h-32 text-blue-600" />
-          </motion.div>
+          </motion.div> */}
           <motion.div
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
@@ -820,7 +820,7 @@ export default function PresentationScreen() {
               </div>
 
               {/* Points Display */}
-              {gameState.currentQuestion.points && (
+              {/* {gameState.currentQuestion.points && (
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -830,7 +830,7 @@ export default function PresentationScreen() {
                     ₹{gameState.currentQuestion.points.toLocaleString()}
                   </Badge>
                 </motion.div>
-              )}
+              )} */}
             </div>
           </Card>
         </motion.div>
@@ -1158,15 +1158,15 @@ export default function PresentationScreen() {
 
       {/* Game Stats - Only show during active gameplay */}
       {gameState.stats && gameState.status !== "topic_selection" && (
-        <div className="absolute top-20 right-6 flex gap-4 bg-white/80 backdrop-blur-[2px] rounded-md px-6 py-4">
-          <div className="text-center flex justify-center items-center space-x-2 text-lg pr-2 border-r-2 border-white">
-            <div className=" text-gray-500">Q</div>
+        <div className="absolute top-20 right-6 flex gap-6 bg-white/50 backdrop-blur-[2px] rounded-full px-6 py-2">
+          <div className="text-center">
+            <div className="text-sm text-gray-500">Q</div>
             <div className="font-bold text-blue-600">
               {gameState.questionNumber}/15
             </div>
           </div>
-          <div className="text-center flex justify-center items-center space-x-2 text-lg">
-            <div className="text-gray-500">₹</div>
+          <div className="text-center">
+            <div className="text-sm text-gray-500">₹</div>
             <div className="font-bold text-green-600">
               {gameState.stats.totalEarned.toLocaleString()}
             </div>
