@@ -713,6 +713,20 @@ export default function AdminPanel() {
     });
   };
 
+let currentAudio: HTMLAudioElement | null = null;
+
+const toggleAudio = (file: string) => {
+  if (currentAudio && !currentAudio.paused) {
+    currentAudio.pause();
+    currentAudio.currentTime = 0;
+    currentAudio = null;
+  } else {
+    currentAudio = new Audio(`/${file}`);
+    currentAudio.play();
+  }
+};
+
+
   // Update the participant selection section
   const renderParticipantSelection = () => (
     <div
@@ -909,93 +923,132 @@ export default function AdminPanel() {
 
   // Update the renderTradeControls function
   const renderTradeControls = () => (
-    <Card className="p-6">
-      <h2 className="text-xl font-semibold mb-4">Trade Controls</h2>
-      <div className="space-y-4">
-        {/* Custom Amount */}
-        <div>
-          <label className="text-sm font-medium text-gray-700 mb-2 block">
-            Custom Amount
-          </label>
+    <>
+      <Card className="p-6">
+        <h2 className="text-xl font-semibold mb-4">Trade Controls</h2>
+        <div className="space-y-4">
+          {/* Custom Amount */}
+          <div>
+            <label className="text-sm font-medium text-gray-700 mb-2 block">
+              Custom Amount
+            </label>
+            <div className="flex gap-2">
+              <Input
+                type="number"
+                placeholder="Enter amount"
+                value={customTradeAmount}
+                onChange={(e) => setCustomTradeAmount(e.target.value)}
+              />
+              <Button
+                onClick={() => {
+                  const amount = parseInt(customTradeAmount);
+                  if (!isNaN(amount)) {
+                    setGameState((prev) => ({ ...prev, tradeAmount: amount }));
+                    channel.postMessage({
+                      type: "TRADE_UPDATE",
+                      amount,
+                    });
+                  }
+                }}
+                className="bg-blue-600"
+              >
+                Set
+              </Button>
+            </div>
+          </div>
+
+          {/* Start Trade Button */}
+          <Button
+            onClick={() => setIsTraderDialogOpen(true)}
+            className="w-full bg-yellow-600"
+          >
+            Start Trade
+          </Button>
+
+          {/* Trade Actions */}
           <div className="flex gap-2">
-            <Input
-              type="number"
-              placeholder="Enter amount"
-              value={customTradeAmount}
-              onChange={(e) => setCustomTradeAmount(e.target.value)}
-            />
             <Button
-              onClick={() => {
-                const amount = parseInt(customTradeAmount);
-                if (!isNaN(amount)) {
-                  setGameState((prev) => ({ ...prev, tradeAmount: amount }));
-                  channel.postMessage({
-                    type: "TRADE_UPDATE",
-                    amount,
-                  });
-                }
-              }}
-              className="bg-blue-600"
+              onClick={() => handleTrade(true)}
+              className="flex-1 bg-green-600"
             >
-              Set
+              Accept Trade
+            </Button>
+            <Button
+              onClick={() => handleTrade(false)}
+              className="flex-1 bg-red-600"
+            >
+              Reject Trade
             </Button>
           </div>
         </div>
 
-        {/* Start Trade Button */}
-        <Button
-          onClick={() => setIsTraderDialogOpen(true)}
-          className="w-full bg-yellow-600"
-        >
-          Start Trade
-        </Button>
-
-        {/* Trade Actions */}
-        <div className="flex gap-2">
-          <Button
-            onClick={() => handleTrade(true)}
-            className="flex-1 bg-green-600"
-          >
-            Accept Trade
-          </Button>
-          <Button
-            onClick={() => handleTrade(false)}
-            className="flex-1 bg-red-600"
-          >
-            Reject Trade
-          </Button>
-        </div>
-      </div>
-
-      {/* Trader Name Dialog */}
-      <Dialog open={isTraderDialogOpen} onOpenChange={setIsTraderDialogOpen}>
-        <DialogContent>
-          <DialogHeader>
-            <DialogTitle>Enter Trader Name</DialogTitle>
-          </DialogHeader>
-          <div className="space-y-4 py-4">
-            <Input
-              placeholder="Trader Name"
-              value={traderName}
-              onChange={(e) => setTraderName(e.target.value)}
-            />
-            <Button
-              onClick={() => {
-                if (traderName) {
-                  updateTrader({ name: traderName });
-                  updateStatus("trading");
-                  setIsTraderDialogOpen(false);
-                }
-              }}
-              className="w-full bg-green-600"
-              disabled={!traderName}
-            >
-              Start Trading
-            </Button>
+        {/* Trader Name Dialog */}
+        <Dialog open={isTraderDialogOpen} onOpenChange={setIsTraderDialogOpen}>
+          <DialogContent>
+            <DialogHeader>
+              <DialogTitle>Enter Trader Name</DialogTitle>
+            </DialogHeader>
+            <div className="space-y-4 py-4">
+              <Input
+                placeholder="Trader Name"
+                value={traderName}
+                onChange={(e) => setTraderName(e.target.value)}
+              />
+              <Button
+                onClick={() => {
+                  if (traderName) {
+                    updateTrader({ name: traderName });
+                    updateStatus("trading");
+                    setIsTraderDialogOpen(false);
+                  }
+                }}
+                className="w-full bg-green-600"
+                disabled={!traderName}
+              >
+                Start Trading
+              </Button>
+            </div>
+          </DialogContent>
+        </Dialog>
+      </Card>
+      <Card className="p-6 grid-cols-3">
+        <h2 className="text-xl font-semibold mb-4">Audio Effects</h2>
+        <div className="space-y-4">
+          {/* Sound Effects */}
+          <div>
+            <label className="text-sm font-medium text-gray-700 mb-2 block">
+              Sound Effects
+            </label>
+            <div className="grid grid-cols-2 gap-2">
+              <Button
+                onClick={() => toggleAudio("fastest-fingers.mp3")}
+                className="bg-blue-500 hover:bg-blue-600"
+              >
+                <Sparkles className="w-4 h-4 mr-2" /> Fastest Finger
+              </Button>
+              <Button
+                onClick={() => toggleAudio("question-thinking.mp3")}
+                className="bg-green-500 hover:bg-green-600"
+              >
+                <Sun className="w-4 h-4 mr-2" /> Question Thinking
+              </Button>
+              <Button
+                onClick={() => toggleAudio("wrong-answer.mp3")}
+                className="bg-red-500 hover:bg-red-600"
+              >
+                <Zap className="w-4 h-4 mr-2" /> Wrong Answer
+              </Button>
+              <Button
+                onClick={() => toggleAudio("right-answer.mp3")}
+                className="bg-yellow-500 hover:bg-yellow-600"
+              >
+                <Cloud className="w-4 h-4 mr-2" /> Right Answer
+              </Button>
+            </div>
           </div>
-        </DialogContent>
-      </Dialog>
-    </Card>
+        </div>
+      </Card>
+    </>
   );
 
   // Update the question management layout

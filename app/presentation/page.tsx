@@ -1145,14 +1145,11 @@ export default function PresentationScreen() {
           {/* Current Topic & Round - Only show when active */}
           {gameState.currentTopic && (
             <div className="flex items-center gap-4 text-sm">
-              <Badge variant="outline" className="px-3 py-1 bg-white">
+              <Badge variant="outline" className="px-3 py-1 bg-white text-lg">
                 Round {gameState.currentRound}/3
               </Badge>
-              <span className="text-gray-600">
-                Topic:{" "}
-                <span className="font-medium text-lg text-blue-200">
-                  {gameState.currentTopic}
-                </span>
+              <span className="font-medium text-lg text-white">
+                Topic: <span className="">{gameState.currentTopic}</span>
               </span>
             </div>
           )}
@@ -1161,15 +1158,15 @@ export default function PresentationScreen() {
 
       {/* Game Stats - Only show during active gameplay */}
       {gameState.stats && gameState.status !== "topic_selection" && (
-        <div className="absolute top-20 right-6 flex gap-6 bg-white/50 backdrop-blur-[2px] rounded-full px-6 py-2">
-          <div className="text-center">
-            <div className="text-sm text-gray-500">Q</div>
+        <div className="absolute top-20 right-6 flex gap-4 bg-white/80 backdrop-blur-[2px] rounded-md px-6 py-4">
+          <div className="text-center flex justify-center items-center space-x-2 text-lg pr-2 border-r-2 border-white">
+            <div className=" text-gray-500">Q</div>
             <div className="font-bold text-blue-600">
               {gameState.questionNumber}/15
             </div>
           </div>
-          <div className="text-center">
-            <div className="text-sm text-gray-500">₹</div>
+          <div className="text-center flex justify-center items-center space-x-2 text-lg">
+            <div className="text-gray-500">₹</div>
             <div className="font-bold text-green-600">
               {gameState.stats.totalEarned.toLocaleString()}
             </div>
@@ -1180,8 +1177,8 @@ export default function PresentationScreen() {
       {/* Player Info - Only show during active gameplay */}
       {gameState.currentParticipant?.name &&
         gameState.status !== "topic_selection" && (
-          <div className="absolute top-20 left-6 bg-white/50 backdrop-blur-[2px] rounded-full px-4 py-2">
-            <div className="flex items-center gap-2">
+          <div className="absolute top-20 left-6 bg-white/80 backdrop-blur-[2px] rounded-md px-6 py-4">
+            <div className="flex items-center gap-2 text-lg">
               <Users className="w-4 h-4 text-blue-600" />
               <div className="font-medium text-gray-700">
                 {gameState.currentParticipant.name}
