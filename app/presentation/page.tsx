@@ -1165,7 +1165,7 @@ export default function PresentationScreen() {
           <div className="text-center">
             <div className="text-sm text-gray-500">Q</div>
             <div className="font-bold text-blue-600">
-              {gameState.stats.answeredQuestions}/15
+              {gameState.questionNumber}/15
             </div>
           </div>
           <div className="text-center">

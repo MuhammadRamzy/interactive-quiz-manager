@@ -302,7 +302,6 @@ export default function AdminPanel() {
 
   // Function to handle round topic selection
   const selectRoundTopic = (roundNumber: number, topic: string) => {
-
     
     if (roundNumber !== gameState.currentRound) return;
     if (!gameState.questionBank || !topic) return;
@@ -541,18 +540,14 @@ export default function AdminPanel() {
   };
 
   // Function to push next question
- const pushNextQuestion = () => {
-   if (questionQueue.length > 0) {
-     const nextQuestion = questionQueue[0];
-     pushQuestion(nextQuestion);
-     removeFromQueue(0);
-
-     // Auto-start timer for non-first questions
-     if (gameState.questionNumber > 1) {
-       startTimer();
-     }
-   }
- };
+  const pushNextQuestion = () => {
+    if (questionQueue.length > 0) {
+      const nextQuestion = questionQueue[0];
+      pushQuestion(nextQuestion);
+      removeFromQueue(0);
+      // Removed the questionNumber increment from here
+    }
+  };
 
   // Add function to manually update stats
   const updateStats = (updates: Partial<GameStats>) => {
