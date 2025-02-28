@@ -186,15 +186,30 @@ export default function AdminPanel() {
     }, 3000);
   };
 
-  const startTimer = () => {
-    setGameState(prev => ({ ...prev, timerRunning: true }))
-    channel.postMessage({ type: "TIMER_START" })
-  }
+   const audioRef = useRef<HTMLAudioElement | null>(null);
 
-  const stopTimer = () => {
-    setGameState(prev => ({ ...prev, timerRunning: false }))
-    channel.postMessage({ type: "TIMER_STOP" })
-  }
+   const startTimer = () => {
+     setGameState((prev) => ({ ...prev, timerRunning: true }));
+     channel.postMessage({ type: "TIMER_START" });
+
+     if (!audioRef.current) {
+       audioRef.current = new Audio("/clock-ticking.mp3");
+       audioRef.current.loop = true;
+     }
+
+     audioRef.current.play();
+   };
+
+   const stopTimer = () => {
+     setGameState((prev) => ({ ...prev, timerRunning: false }));
+     channel.postMessage({ type: "TIMER_STOP" });
+
+     if (audioRef.current) {
+       audioRef.current.pause();
+       audioRef.current.currentTime = 0;
+     }
+   };
+
 
   const handleOptionSelect = (optionIndex: number) => {
     if (gameState.revealAnswer) return; // Don't allow selection after reveal
