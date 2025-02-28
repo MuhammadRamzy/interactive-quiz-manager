@@ -514,7 +514,7 @@ export default function PresentationScreen() {
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        className="w-full max-w-6xl mx-auto"
+        className="w-full max-w-7xl mx-auto"
       >
         <motion.div
           initial={{ scale: 0.9 }}
@@ -529,7 +529,7 @@ export default function PresentationScreen() {
           </Badge>
         </motion.div>
 
-        <div className="grid grid-cols-3 gap-8">
+        <div className="grid grid-cols-6 gap-8">
           {gameState.availableTopics.map((topic) => (
             <motion.div
               key={topic}
@@ -550,13 +550,13 @@ export default function PresentationScreen() {
                   rotate: gameState.currentTopic === topic ? [0, -10, 10, 0] : 0
                 }}
                 transition={{ duration: 0.5 }}
-                className="h-24 flex items-center justify-center mb-4"
+                className="flex items-center justify-center mb-4"
               >
-                <Brain className={`w-20 h-20 ${
+                <Brain className={`w-16 h-16 ${
                   gameState.currentTopic === topic ? "text-blue-600" : "text-gray-600"
                 }`} />
               </motion.div>
-              <h3 className="text-3xl font-bold text-gray-800 mb-4">{topic}</h3>
+              <h3 className="text-xl font-bold text-gray-800 mb-4">{topic}</h3>
               {gameState.currentTopic === topic && (
                 <motion.div
                   initial={{ opacity: 0, y: 10 }}
