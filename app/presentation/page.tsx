@@ -609,7 +609,7 @@ export default function PresentationScreen() {
           </Badge>
         </motion.div>
 
-        <div className="grid grid-cols-6 gap-8">
+        <div className="grid grid-cols-5 gap-8">
           {gameState.availableTopics.map((topic) => (
             <motion.div
               key={topic}
@@ -1123,7 +1123,7 @@ export default function PresentationScreen() {
         className="absolute top-0 left-0 -z-10"
       />
       {/* Subtle Header */}
-      <div className="absolute top-0 left-0 right-0 h-16 bg-white/30 backdrop-blur-[0px] z-10">
+      <div className="absolute top-0 left-0 right-0 h-16 backdrop-blur-[0px] z-10">
         <div className="max-w-[1920px] mx-auto px-8 h-full flex items-center justify-between">
           <div className="flex items-center gap-3">
             <Image
@@ -1157,7 +1157,7 @@ export default function PresentationScreen() {
       </div>
 
       {/* Game Stats - Only show during active gameplay */}
-      {gameState.stats && gameState.status !== "topic_selection" && (
+      {/* {gameState.stats && gameState.status !== "topic_selection" && (
         <div className="absolute top-20 right-6 flex gap-6 bg-white/50 backdrop-blur-[2px] rounded-full px-6 py-2">
           <div className="text-center">
             <div className="text-sm text-gray-500">Q</div>
@@ -1172,7 +1172,7 @@ export default function PresentationScreen() {
             </div>
           </div>
         </div>
-      )}
+      )} */}
 
       {/* Player Info - Only show during active gameplay */}
       {gameState.currentParticipant?.name &&
