@@ -1,4 +1,4 @@
-# Sell Me The Answer
+# Interactive Quiz Based Event Manager
 
 > **Professional Interactive Quiz Event Management System**
 
